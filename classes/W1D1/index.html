@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<title>Ironhack - Introduction</title>
+
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<link rel="stylesheet" href="../../dist/reveal.css" />
+		<link rel="stylesheet" href="../../dist/theme/moon.css" />
+		<link rel="stylesheet" href="../../plugin/highlight/monokai.css" />
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h3 class="r-fit-text">🥳 Welcome 🥳</h3>
+				</section>
+				<section>
+					<h3>Morning topics:</h3>
+					<ul>
+						<li><a href="#intro">Who am I, advices..</a></li>
+						<li><a href="#setup">Setup</a></li>
+						<li><a href="#terminal">Terminal</a></li>
+						<li><a href="#git">Git</a></li>
+						<li><a href="#html">Basics of HTML</a></li>
+						<li><a href="#css">Basics of CSS</a></li>
+					</ul>
+				</section>
+				<section id="intro">
+					<section data-auto-animate>
+						<h3>Who am I?</h3>
+						<pre data-id="code-intro">
+							<code data-line-numbers data-noescape data-trim>
+							const me = {}		
+							</code>
+						</pre>
+					</section>
+					<section data-auto-animate>
+						<h3>Who am I?</h3>
+						<pre data-id="code-intro">
+							<code data-line-numbers data-noescape data-trim>
+							const me = {
+								name: "Florian"
+							}		
+							</code>
+						</pre>
+					</section>
+					<section data-auto-animate>
+						<h3>Who am I?</h3>
+						<pre data-id="code-intro">
+							<code data-line-numbers data-noescape data-trim>
+							const me = {
+								name: "Florian",
+								age: 34
+							}		
+							</code>
+						</pre>
+					</section>
+					<section data-auto-animate>
+						<h3>Who am I?</h3>
+						<pre data-id="code-intro">
+							<code data-line-numbers data-noescape data-trim>
+							const me = {
+								name: "Florian",
+								age: 34,
+								activities: ["🏔️", "🏂", "💻"]
+							}		
+							</code>
+						</pre>
+					</section>
+					<section data-auto-animate>
+						<h3>Who am I?</h3>
+						<pre data-id="code-intro">
+							<code data-line-numbers data-noescape data-trim>
+							const me = {
+								name: "Florian",
+								age: 34,
+								activities: ["🏔️", "🏂", "💻"],
+								jobs: ["Chiropractor", "Bartender", "Knifesmith"] 
+							}		
+							</code>
+						</pre>
+					</section>
+					<section data-auto-animate>
+						<h3>Who am I?</h3>
+						<pre data-id="code-intro">
+							<code data-line-numbers data-noescape data-trim>
+							const me = {
+								name: "Florian",
+								age: 34,
+								activities: ["🏔️", "🏂", "💻"],
+								jobs: ["Chiropractor", "Bartender", "Knifesmith"],
+								personalBreakthrough: "CS50"
+							}		
+							</code>
+						</pre>
+					</section>
+					<section data-auto-animate>
+						<h3>Who am I?</h3>
+						<pre data-id="code-intro">
+							<code data-line-numbers data-noescape data-trim>
+							const me = {
+								name: "Florian",
+								age: 34,
+								activities: ["🏔️", "🏂", "💻"],
+								jobs: ["Chiropractor", "Bartender", "Knifesmith", "Ironhacker"],
+								personalBreakthrough: "CS50"
+							}		
+							</code>
+						</pre>
+					</section>
+					<section data-auto-animate>
+						<h3>Who am I?</h3>
+						<pre data-id="code-intro">
+							<code data-line-numbers data-noescape data-trim>
+							const me = {
+								name: "Florian",
+								age: 34,
+								activities: ["🏔️", "🏂", "💻"],
+								jobs: ["Chiropractor", "Bartender", "Knifesmith", "Developer"],
+								personalBreakthrough: "CS50"
+							}		
+							</code>
+						</pre>
+					</section>
+				</section>
+				<section>
+					<h3 class="r-fit-text">Will it be difficult?</h3>
+					<h3 style="color: red" class="fragment">true</h3>
+					<div class="r-stack">
+						<p class="fragment fade-in-then-out">
+							We are going to cover a lot of topic in a short amount of time.
+						</p>
+						<p class="fragment fade-in-then-out">
+							You need to be dedicated to your learning
+						</p>
+						<p class="fragment fade-in-then-out">
+							You need to prepare daily lessons by reading them in advance
+						</p>
+						<p class="fragment fade-in-then-out">
+							You need to review concepts that you did not grasped during
+							lessons
+						</p>
+						<p class="fragment fade-in-then-out">
+							You need to ask your questions
+						</p>
+						<p class="fragment fade-in-then-out">
+							ChatGPT is
+							<span style="text-decoration: underline">not</span> your friend
+						</p>
+						<p class="fragment">but...</p>
+					</div>
+					<ol style="margin: 0">
+						<li class="fragment">You will learn by doing</li>
+						<li class="fragment">You will learn to search</li>
+						<li class="fragment">We will review painpoints</li>
+						<li class="fragment">I'm here to help</li>
+					</ol>
+				</section>
+				<section>
+					<h3>About ChatGPT, copying code.</h3>
+					<p>
+						It's a thing to say that developers spend their time copy/pasting
+						code from online ressources.
+					</p>
+					<p>
+						While true to some extent (you don't need to reinvent the wheel), it
+						is a pretty bad thing to do.
+					</p>
+					<p>
+						Code is written in a language, therefore it is -to some extent-
+						expressive.
+					</p>
+					<p>
+						Understanding by reading is an illusion, you will need to be able to
+						create your own reasonning.
+					</p>
+				</section>
+				<section>
+					<h3>You need to do the jump!</h3>
+					<iframe
+						data-src="https://www.youtube.com/embed/9cL7HVU-uU4?si=00VBcGB8V04KvTj0&amp;start=11"
+						title="YouTube video player"
+						width="560"
+						height="315"></iframe>
+				</section>
+				<section>
+					<h3>I'm struggling more than this other student.</h3>
+					<h1 class="fragment">⛔️</h1>
+					<div class="r-stack">
+						<p class="fragment fade-in-then-out">
+							Don't compare yourself to the others.
+						</p>
+						<p class="fragment" style="color: yellowgreen">
+							But to yourself a few weeks/days back.
+						</p>
+					</div>
+				</section>
+				<section data-auto-animate>
+					<h3>So, what's the plan?</h3>
+					<p>Module 1</p>
+					<ul>
+						<li class="fragment">HTML</li>
+						<li class="fragment">CSS</li>
+						<li class="fragment">
+							JavaScript
+							<ul>
+								<li class="fragment">functions</li>
+								<li class="fragment">HoF</li>
+								<li class="fragment">Class</li>
+								<li class="fragment">DOM Manipulations</li>
+								<li class="fragment">Asynchronicity</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section data-auto-animate>
+					<h3>So, what's the plan?</h3>
+					<p>Module 2</p>
+					<ul>
+						<li class="fragment">
+							React
+							<ul>
+								<li class="fragment">JSX</li>
+								<li class="fragment">Bundler</li>
+								<li class="fragment">Props</li>
+								<li class="fragment">State</li>
+								<li class="fragment">Routing</li>
+								<li class="fragment">LifeCycle</li>
+								<li class="fragment">Context</li>
+								<li class="fragment">Communicating with an API</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section data-auto-animate>
+					<h3>So, what's the plan?</h3>
+					<p>Module 3</p>
+					<ul>
+						<li class="fragment">
+							Backend
+							<ul>
+								<li class="fragment">Express</li>
+								<li class="fragment">MongoDB</li>
+								<li class="fragment">Mongoose</li>
+								<li class="fragment">Schema Design</li>
+								<li class="fragment">Security</li>
+								<li class="fragment">Authentication</li>
+								<li class="fragment">Authorization</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Typical lesson-week day</h3>
+					<ul>
+						<li>Be in class (start at 9 🥱)</li>
+						<li>Code review (9 - 10 🧑‍💻)</li>
+						<li>Lesson (10 - 11 📚)</li>
+						<li>Break (11 - 11:30 ☕️)</li>
+						<li>Lesson (11:30 - 13 📕📗📘)</li>
+						<li>Break (13 - 14 🥗)</li>
+						<li>Lab intro (14 - 14:10)</li>
+						<li>Lab / Review / Prepare next day</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Typical project-week day</h3>
+					<ul>
+						<li>Be in class (by 9:30)</li>
+						<li>Standup</li>
+						<li>Work on project</li>
+					</ul>
+				</section>
+				<section>
+					<h3>How to turn the bootcamp into a success?</h3>
+					<p>Do all of the labs. (They are part of the validation)</p>
+					<p>Submit them (even if not fully finished)</p>
+					<p>Ask questions!</p>
+					<p>Making it work before making it perfect</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="../../dist/reveal.js"></script>
+		<script src="../../plugin/highlight/highlight.js"></script>
+
+		<script>
+			Reveal.initialize({
+				// center: true,
+				hash: true,
+				plugins: [RevealHighlight],
+			})
+		</script>
+	</body>
+</html>
