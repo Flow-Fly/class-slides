@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<title>Ironhack - Introduction</title>
+
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<link rel="stylesheet" href="../../dist/reveal.css" />
+		<link rel="stylesheet" href="../../dist/theme/moon.css" />
+		<link rel="stylesheet" href="../../plugin/highlight/monokai.css" />
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h3>Summary:</h3>
+					<ul>
+						<li><a href="./index.html#intro">Who am I, advices..</a></li>
+						<li><a href="./setup.html">Setup</a></li>
+						<li><a href="./terminal">Terminal</a></li>
+						<li><a href="./git">Git</a></li>
+						<li><a href="./html">Basics of HTML</a></li>
+						<li><a href="./css">Basics of CSS</a></li>
+					</ul>
+				</section>
+				<section data-auto-animate>
+					<h3>Why would we use the Terminal?</h3>
+				</section>
+				<section data-auto-animate>
+					<h3>Why would we use the Terminal?</h3>
+					<h4>Efficiency</h4>
+					<p>file navigation, server management...</p>
+				</section>
+				<section data-auto-animate>
+					<h3>Why would we use the Terminal?</h3>
+					<h4>Automation</h4>
+					<p>some task can be automated</p>
+				</section>
+				<section data-auto-animate>
+					<h3>Why would we use the Terminal?</h3>
+					<h4>Version control</h4>
+					<p>
+						Git is often used through the terminal (even if some GUI now allow
+						you to use most commands)
+					</p>
+				</section>
+				<section data-auto-animate>
+					<h3>Why would we use the Terminal?</h3>
+					<h4>Package Management</h4>
+					<p>npm (and others) are used through the terminal</p>
+				</section>
+				<section data-auto-animate>
+					<h3>Why would we use the Terminal?</h3>
+					<h4>Debugging</h4>
+					<p>Errors can be read through the terminal</p>
+				</section>
+				<section data-auto-animate>
+					<h3>Why would we use the Terminal?</h3>
+					<h4>File System Navigation</h4>
+					<p>
+						Once you're used to it, it's faster than GUI navigation. It's also
+						useful when connecting to a server (which does not have a GUI)
+					</p>
+				</section>
+				<section data-auto-animate>
+					<h3>Why would we use the Terminal?</h3>
+					<h4>Remote Access</h4>
+					<p>Connecting to a remote computer</p>
+				</section>
+				<section data-auto-animate>
+					<h3>Why would we use the Terminal?</h3>
+					<h4>You will have to.</h4>
+					<p>
+						Mastering the terminal is an investment that pays off throughout a
+						developer's career.
+					</p>
+				</section>
+
+				<section data-auto-animate>
+					<h3>Useful commands</h3>
+					<h4>ls</h4>
+					<div class="fragment">
+						<pre data-id="terminal-commands">
+              <code data-noescape data-trim>
+              ls
+              </code>
+            </pre>
+						<p>Will list the content of the current directory</p>
+					</div>
+					<div class="fragment">
+						<pre data-id="terminal-commands">
+              <code data-noescape data-trim>
+              ls ./documents
+              </code>
+            </pre>
+						<p>Will list the content of the documents folder if it exist</p>
+					</div>
+					<div class="fragment">
+						<pre data-id="terminal-commands">
+              <code data-noescape data-trim>
+              ls ./documents/ironhack
+              </code>
+            </pre>
+						<p>
+							Will list the content of the ironhack folder located in the
+							documents folder
+						</p>
+					</div>
+				</section>
+				<section>
+					<h2>Important!</h2>
+					<p>
+						When writing a path / a filename, using TAB will autocomplete the
+						name for you.
+					</p>
+					<p>
+						In the case of multiple results, you'll need to be more specific.
+					</p>
+					<p>TAB is your friend.</p>
+				</section>
+				<section data-auto-animate>
+					<h3>Useful commands</h3>
+					<h4>pwd (present working directory)</h4>
+					<pre class="fragment" data-id="terminal-commands">
+            <code data-noescape data-trim>
+            pwd
+            </code>
+          </pre>
+				</section>
+				<section data-auto-animate>
+					<h3>Useful commands</h3>
+					<h4>cd (change directory)</h4>
+					<div class="fragment">
+						<pre data-id="terminal-commands">
+              <code data-noescape data-trim>
+              cd documents
+              </code>
+            </pre>
+					</div>
+					<p>Will take you to the documents folder (if it exist)</p>
+					<div class="fragment">
+						<pre data-id="terminal-commands">
+              <code data-noescape data-trim>
+              cd
+              </code>
+            </pre>
+						<p>Will take you back to the home directory</p>
+					</div>
+					<div class="fragment">
+						<pre data-id="terminal-commands">
+              <code data-noescape data-trim>
+              cd documents/ironhack
+              cd doc[TAB]iro[TAB]
+              </code>
+            </pre>
+						<p>Will take you to the ironhack folder in the documents folder</p>
+					</div>
+				</section>
+				<section data-auto-animate>
+					<h3>Useful commands</h3>
+					<h4>mkdir (make directory)</h4>
+					<div class="fragment">
+						<pre data-id="terminal-commands">
+              <code data-noescape data-trim>
+							mkdir my-folder-name
+							mkdir my folder name
+							mkdir "my folder name"
+              </code>
+            </pre>
+					</div>
+				</section>
+				<section data-auto-animate>
+					<h3>Useful commands</h3>
+					<h4>touch (create file)</h4>
+					<div class="fragment">
+						<pre data-id="terminal-commands">
+              <code data-noescape data-trim>
+              touch index.html style.css index.js
+              </code>
+            </pre>
+					</div>
+				</section>
+				<section data-auto-animate>
+					<h3>Good usecase</h3>
+					<p>
+						During the bootcamp, you're going to take a lot of notes, you will
+						download a lot of labs, create projects etc.
+					</p>
+					<p>It will prove useful to have a good organisation from the start</p>
+
+					<div class="fragment">
+						<pre data-id="terminal-commands">
+              <code data-noescape data-trim>
+							cd
+							# To go back to the home
+							cd documents
+							# or wherever you want to create the ironhack folder
+							mkdir ironhack
+							cd ironh[TAB]
+							mkdir -p module-{1..3}/week-{1..5}/{day-{1..3},labs}
+              </code>
+            </pre>
+					</div>
+				</section>
+				<section data-auto-animate>
+					<h3>Typical day to day usecase</h3>
+
+					<div class="fragment">
+						<pre data-id="terminal-commands">
+              <code data-noescape data-trim>
+							cd doc[TAB]iro[TAB]1[TAB]1[TAB]
+							# This command expands to:
+							# cd documents/ironhack/week-1/day-1
+              </code>
+            </pre>
+					</div>
+				</section>
+				<section data-auto-animate>
+					<h3>Typical day to day usecase</h3>
+
+					<div>
+						<pre data-id="terminal-commands">
+              <code data-noescape data-trim>
+							cd doc[TAB]iro[TAB]1[TAB]1[TAB]
+							# This command expands to:
+							# cd documents/ironhack/week-1/day-1
+							touch index.html
+              </code>
+            </pre>
+					</div>
+				</section>
+				<section data-auto-animate>
+					<h3>Typical day to day usecase</h3>
+
+					<div>
+						<pre data-id="terminal-commands">
+              <code data-noescape data-trim>
+							cd doc[TAB]iro[TAB]1[TAB]1[TAB]
+							# This command expands to:
+							# cd documents/ironhack/week-1/day-1
+							touch index.html
+							mkdir styles script
+              </code>
+            </pre>
+					</div>
+				</section>
+				<section data-auto-animate>
+					<h3>Typical day to day usecase</h3>
+
+					<div>
+						<pre data-id="terminal-commands">
+              <code data-noescape data-trim>
+							cd doc[TAB]iro[TAB]1[TAB]1[TAB]
+							# This command expands to:
+							# cd documents/ironhack/week-1/day-1
+							touch index.html
+							mkdir styles script
+							touch st[TAB]main.css sc[TAB]index.js index.html
+              </code>
+            </pre>
+					</div>
+				</section>
+				<section data-auto-animate>
+					<h3>Typical day to day usecase</h3>
+
+					<div>
+						<pre data-id="terminal-commands">
+              <code data-noescape data-trim>
+							cd doc[TAB]iro[TAB]1[TAB]1[TAB]
+							# This command expands to:
+							# cd documents/ironhack/week-1/day-1
+							touch index.html
+							mkdir styles script
+							touch st[TAB]main.css sc[TAB]index.js index.html
+							code .
+              </code>
+            </pre>
+					</div>
+				</section>
+				<section>
+					<h3>Extra</h3>
+					<p>
+						If you want to go the extra-mile, you can install some programs like
+					</p>
+					<ul>
+						<li><code>zoxide</code></li>
+						<li><code>fzf</code></li>
+						<li><code>exa</code></li>
+						<li><code>nvim</code></li>
+					</ul>
+				</section>
+			</div>
+		</div>
+
+		<script src="../../dist/reveal.js"></script>
+		<script src="../../plugin/highlight/highlight.js"></script>
+
+		<script>
+			Reveal.initialize({
+				// center: true,
+				hash: true,
+				plugins: [RevealHighlight],
+			})
+		</script>
+	</body>
+</html>
