@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<title>Ironhack - Introduction</title>
+
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<link rel="stylesheet" href="../../dist/reveal.css" />
+		<link rel="stylesheet" href="../../dist/theme/moon.css" />
+		<link rel="stylesheet" href="../../plugin/highlight/monokai.css" />
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section
+					data-background-image="https://media1.tenor.com/m/mfJimYfYYgsAAAAC/css-king.gif">
+					<h3>CSS:</h3>
+					<ul>
+						<li style="font-weight: 700">
+							<a href="./index.html">CSS Box Model</a>
+						</li>
+						<li><a href="./selectors-advanced.html">Advanced Selectors</a></li>
+						<li><a href="./responsive.html">Responsive Design</a></li>
+						<li><a style="color: greenyellow" href="#">Flexbox</a></li>
+					</ul>
+				</section>
+				<section>
+					<h2>Flexbox Fundamentals</h2>
+					<p>
+						Flexbox offers a more efficient way to lay out, align, and
+						distribute space among items in a container, even when their size is
+						unknown or dynamic.
+					</p>
+				</section>
+				<section>
+					<h3>Important note</h3>
+					<p>
+						Flexbox have quite a few properties. Some target the parent / the
+						container, others target the flex-items aka the childrens.
+					</p>
+				</section>
+				<section>
+					<h3>Main and Cross Axes</h3>
+					<p>
+						The main axis is the primary direction flex items are placed in the
+						flex container, which can be horizontal (row) or vertical (column).
+						The cross axis is perpendicular to the main axis and dictates how
+						items align in the other direction.
+					</p>
+				</section>
+				<section>
+					<h3>Creating a Flex Container</h3>
+					<p>To use Flexbox, first declare a flex container.</p>
+					<pre><code data-trim data-noescape>
+      .flex-container {
+        display: flex;
+      }
+          </code></pre>
+					<iframe
+						style="border: none"
+						data-src="./snippets/flex.html"
+						width="400px"
+						height="400px"></iframe>
+				</section>
+				<section>
+					<h3>Direction of Flex Items</h3>
+					<p>Control the layout direction of flex items with flex-direction.</p>
+					<pre><code data-trim data-noescape>
+      .flex-container {
+        display: flex;
+        flex-direction: row; /* or column, row-reverse, column-reverse */
+      }
+          </code></pre>
+					<iframe
+						style="border: none"
+						data-src="./snippets/flex-direction.html"
+						width="400px"
+						height="420px"></iframe>
+				</section>
+				<section>
+					<h3>Justify Content</h3>
+					<p>Align flex items along the main axis with justify-content.</p>
+					<pre><code data-trim data-noescape>
+      .flex-container {
+        display: flex;
+        justify-content: flex-start; /* flex-end, center, space-between, space-around */
+      }
+          </code></pre>
+					<iframe
+						style="border: none"
+						data-src="./snippets/justify-content.html"
+						width="700px"
+						height="500px"></iframe>
+				</section>
+				<section>
+					<h3>Align Items</h3>
+					<p>Align flex items along the cross axis with align-items.</p>
+					<pre><code data-trim data-noescape>
+      .flex-container {
+        display: flex;
+        align-items: center; /* flex-start, flex-end, baseline, stretch */
+      }
+          </code></pre>
+					<iframe
+						style="border: none"
+						data-src="./snippets/align-items.html"
+						width="700px"
+						height="500px"></iframe>
+				</section>
+				<section>
+					<h3>Flex Wrap</h3>
+					<p>Allow flex items to wrap as needed with flex-wrap.</p>
+					<pre><code data-trim data-noescape>
+      .flex-container {
+        display: flex;
+        flex-wrap: wrap; /* nowrap, wrap-reverse */
+      }
+          </code></pre>
+					<iframe
+						style="border: none"
+						data-src="./snippets/flex-wrap.html"
+						width="700px"
+						height="500px"></iframe>
+				</section>
+				<section>
+					<h3>Flex Flow Shorthand</h3>
+					<p>Use flex-flow to set flex-direction and flex-wrap together.</p>
+					<pre><code data-trim data-noescape>
+      .flex-container {
+        display: flex;
+        flex-flow: row wrap; /* column wrap, column nowrap, etc. */
+      }
+          </code></pre>
+				</section>
+				<section>
+					<h3>Align Content</h3>
+					<p>
+						Align the flex container’s lines within when there is extra space in
+						the cross-axis.
+					</p>
+					<p>
+						This property only take effect if you have multiple lines (we need
+						to wrap!)
+					</p>
+
+					<pre><code data-trim data-noescape>
+            .flex-container {
+              display: flex;
+              flex-wrap: wrap;
+              align-content: space-between; /* flex-start, flex-end, center, space-around, stretch */
+            }
+          </code></pre>
+					<iframe
+						style="border: none"
+						data-src="./snippets/align-content.html"
+						width="800px"
+						height="500px"></iframe>
+				</section>
+				<section>
+					<h3>Gap</h3>
+					<p>
+						This property oas it names implies allow you to add a
+						<code>gap</code> between flex-items.
+					</p>
+
+					<pre><code data-trim data-noescape>
+            .flex-container {
+              display: flex;
+              gap: 1rem;
+              justify-content: center;
+            }
+          </code></pre>
+					<iframe
+						style="border: none"
+						data-src="./snippets/gap.html"
+						width="800px"
+						height="500px"></iframe>
+				</section>
+				<section>
+					<h3>Ordering Flex Items</h3>
+					<p>
+						Change the visual order of flex items without affecting the DOM with
+						the order property.
+					</p>
+					<pre><code data-trim data-noescape>
+      .item {
+        order: number; /* default is 0 */
+      }
+          </code></pre>
+					<iframe
+						style="border: none"
+						data-src="./snippets/order.html"
+						width="800px"
+						height="500px"></iframe>
+				</section>
+				<section>
+					<h3>Controlling Item Growth</h3>
+					<p>
+						Use flex-grow to define how much a flex item should grow relative to
+						the rest of the flex items.
+					</p>
+					<pre><code data-trim data-noescape>
+      .item {
+        flex-grow: 1; /* default is 0 */
+      }
+          </code></pre>
+					<iframe
+						style="border: none"
+						data-src="./snippets/grow.html"
+						width="800px"
+						height="500px"></iframe>
+				</section>
+				<section>
+					<h3>Controlling Item Shrinkage</h3>
+					<p>
+						flex-shrink determines how a flex item will shrink relative to
+						others in the container.
+					</p>
+					<pre><code data-trim data-noescape>
+      .item {
+        flex-shrink: 1; /* default is 1 */
+      }
+          </code></pre>
+					<iframe
+						style="border: none"
+						data-src="./snippets/shrink.html"
+						width="500px"
+						height="500px"></iframe>
+				</section>
+				<section>
+					<h3>Aligning an Individual Item</h3>
+					<p>
+						Use align-self to override the container's align-items property for
+						individual items.
+					</p>
+					<pre><code data-trim data-noescape>
+      .item {
+        align-self: center; /* auto, flex-start, flex-end, baseline, stretch */
+      }
+          </code></pre>
+					<iframe
+						style="border: none"
+						data-src="./snippets/self.html"
+						width="500px"
+						height="500px"></iframe>
+				</section>
+			</div>
+		</div>
+
+		<script src="../../dist/reveal.js"></script>
+		<script src="../../plugin/highlight/highlight.js"></script>
+
+		<script>
+			Reveal.initialize({
+				// center: true,
+				hash: true,
+				plugins: [RevealHighlight],
+			})
+		</script>
+	</body>
+</html>

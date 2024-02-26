@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			em {
+				color: white;
+			}
+			.container {
+				padding: 0.5rem;
+				border: 1px solid white;
+				background-color: rgb(77, 21, 77);
+				display: flex;
+				width: 130px;
+				flex-wrap: wrap;
+				height: 200px;
+			}
+			.flex {
+				display: flex;
+				gap: 1rem;
+			}
+
+			.col {
+				display: flex;
+				flex-direction: column;
+			}
+			.center {
+				align-content: center;
+			}
+			.start {
+				align-content: flex-start;
+			}
+			.end {
+				align-content: flex-end;
+			}
+
+			.stretch {
+				align-content: stretch;
+			}
+			.around {
+				align-content: space-around;
+			}
+			.box {
+				background-color: rgb(223, 110, 69);
+				padding: 0.5rem;
+				display: flex;
+				align-items: center;
+				align-content: center;
+
+				border: 1px solid black;
+			}
+		</style>
+		<div class="flex">
+			<div class="col">
+				<em>flex-start</em>
+				<div class="container start">
+					<div class="box">1</div>
+					<div class="box">2</div>
+					<div class="box">3</div>
+					<div class="box">4</div>
+					<div class="box">5</div>
+					<div class="box">6</div>
+					<div class="box">7</div>
+				</div>
+			</div>
+			<div class="col">
+				<em>center</em>
+				<div class="container center">
+					<div class="box">1</div>
+					<div class="box">2</div>
+					<div class="box">3</div>
+					<div class="box">4</div>
+					<div class="box">5</div>
+					<div class="box">6</div>
+					<div class="box">7</div>
+				</div>
+			</div>
+			<div class="col">
+				<em>flex-end</em>
+				<div class="container end">
+					<div class="box">1</div>
+					<div class="box">2</div>
+					<div class="box">3</div>
+					<div class="box">4</div>
+					<div class="box">5</div>
+					<div class="box">6</div>
+					<div class="box">7</div>
+				</div>
+			</div>
+
+			<div class="col">
+				<em>stretch</em>
+				<div class="container stretch">
+					<div class="box">1</div>
+					<div class="box">2</div>
+					<div class="box">3</div>
+					<div class="box">4</div>
+					<div class="box">5</div>
+					<div class="box">6</div>
+					<div class="box">7</div>
+				</div>
+			</div>
+			<div class="col">
+				<em>space-around</em>
+				<div class="container around">
+					<div class="box">1</div>
+					<div class="box">2</div>
+					<div class="box">3</div>
+					<div class="box">4</div>
+					<div class="box">5</div>
+					<div class="box">6</div>
+					<div class="box">7</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			em {
+				color: white;
+			}
+			.container {
+				padding: 0.25rem;
+				border: 1px solid white;
+				background-color: rgb(77, 21, 77);
+				display: flex;
+				height: 300px;
+			}
+			.flex {
+				display: flex;
+				gap: 1.5rem;
+			}
+			.col {
+				flex-direction: column;
+			}
+			.center {
+				align-items: center;
+			}
+			.start {
+				align-items: flex-start;
+			}
+			.end {
+				align-items: flex-end;
+			}
+			.between {
+				align-items: space-between;
+			}
+			.evenly {
+				align-items: space-evenly;
+			}
+			.around {
+				align-items: space-around;
+			}
+			.box {
+				background-color: rgb(223, 110, 69);
+				height: 25px;
+				aspect-ratio: 1;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border: 1px solid black;
+			}
+		</style>
+
+		<div class="flex">
+			<div class="col">
+				<em>align-items: flex-start</em>
+				<div class="container start">
+					<div class="box">1</div>
+					<div class="box">2</div>
+				</div>
+			</div>
+			<div class="col">
+				<em>align-items: center</em>
+				<div class="container center">
+					<div class="box">1</div>
+					<div class="box">2</div>
+				</div>
+			</div>
+			<div class="col">
+				<em>align-items: flex-end</em>
+				<div class="container end">
+					<div class="box">1</div>
+					<div class="box">2</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

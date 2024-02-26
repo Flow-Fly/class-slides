@@ -17,102 +17,148 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
+				<section
+					data-background-image="https://media1.tenor.com/m/mfJimYfYYgsAAAAC/css-king.gif">
+					<h3>CSS:</h3>
+					<ul>
+						<li style="font-weight: 700">
+							<a href="./index.html">CSS Box Model</a>
+						</li>
+						<li>
+							<a style="color: greenyellow" href="#">Advanced Selectors</a>
+						</li>
+						<li><a href="./responsive.html">Responsive Design</a></li>
+						<li><a href="./flexbox.html">Flexbox</a></li>
+					</ul>
+				</section>
 				<section>
 					<h2>Advanced CSS Selectors</h2>
-						<h3>Basic & Grouped Selectors</h3>
-						<p>
-							Select and style HTML elements. Group selectors to apply styles
-							collectively.
-						</p>
-						<pre><code data-trim>
+					<h3>Basic & Grouped Selectors</h3>
+					<p>
+						Select and style HTML elements. Group selectors to apply styles
+						collectively.
+					</p>
+					<pre><code data-trim>
       h1, h2, .important {
         color: red;
       }</code></pre>
+				</section>
+				<section>
+					<section>
+						<h3>Combinator Selectors</h3>
+						<p>Select elements based on their relationships.</p>
 					</section>
 					<section>
-            <section>
-              <h3>Combinator Selectors</h3>
-              <p>Select elements based on their relationships.</p>
-
-            </section>
-						<section>
-							<h4>Child Selector (>)</h4>
-							<pre><code data-trim>
+						<h4>Child Selector (>)</h4>
+						<pre><code data-trim>
       div > p {
         color: blue;
       }</code></pre>
-						</section>
+						<pre><code data-trim>
+				<div>
+					<p>I'm blue</p>
+					<article>
+						<p>Da ba dee da ba di</p>
+					</article>
+				</div>
+				</code></pre>
+					</section>
+					<section>
+						<h4>Descendant Selector (>)</h4>
+						<pre><code data-trim>
+      div  p {
+        color: blue;
+      }</code></pre>
+						<pre><code data-trim>
+				<div>
+					<p>I'm blue</p>
+					<article>
+						<p>Da ba dee da ba di</p>
+					</article>
+				</div>
+				</code></pre>
+					</section>
 
-              <section>
-                  <h4>Adjacent Sibling Selector (+)</h4>
-                  <p>Selects an element that is directly after another specific element.</p>
-                  <pre><code data-trim>
+					<section>
+						<h4>Adjacent Sibling Selector (+)</h4>
+						<p>
+							Selects an element that is directly after another specific
+							element.
+						</p>
+						<pre><code data-trim>
           /* Applies to any &lt;p&gt; element that directly follows an &lt;h2&gt; */
 
           h2 + p {
             color: blue;
           }</code></pre>
-                  <p>Example</p>
-                  <pre><code data-trim>
+						<p>Example</p>
+						<pre><code data-trim>
           <p>Text 1</p> <!-- not styled -->
           <h2>Title</h2> <!-- not styled -->
           <p>Text 2</p> <!-- color is blue -->
           <p>Text 3</p> <!-- not styled -->
           
                   </code></pre>
-              </section>
-              <!-- General Sibling Selector (~) Example -->
-              <section>
-                  <h4>General Sibling Selector (~)</h4>
-                  <p>Selects all elements that are siblings of a specific element.</p>
-                  <pre><code data-trim>
+					</section>
+					<!-- General Sibling Selector (~) Example -->
+					<section>
+						<h4>General Sibling Selector (~)</h4>
+						<p>Selects all elements that are siblings of a specific element.</p>
+						<pre><code data-trim>
           /* Applies to all &lt;p&gt; elements that are siblings of &lt;h2&gt;, not just the next one */
 
           h2 ~ p {
             color: green;
           }</code></pre>
-                  <p>Example: All <code>&lt;p&gt;</code> elements that follow an <code>&lt;h2&gt;</code>, at any point, are selected and styled.</p>
-              </section>
-          
+						<p>
+							Example: All <code>&lt;p&gt;</code> elements that follow an
+							<code>&lt;h2&gt;</code>, at any point, are selected and styled.
+						</p>
 					</section>
-					<section>
-						<h3>Attribute Selectors</h3>
-						<p>Select elements based on attributes.</p>
-						<pre><code data-trim>
+				</section>
+				<section>
+					<h3>Attribute Selectors</h3>
+					<p>Select elements based on attributes.</p>
+					<pre><code data-trim>
       input[type="text"] {
         border: 1px solid #000;
       }
       a[target="_blank"] {
         background-color: yellow;
       }</code></pre>
-					</section>
+				</section>
+				<section>
+					<h3>Pseudo-classes & Pseudo-elements</h3>
 					<section>
-						<h3>Pseudo-classes & Pseudo-elements</h3>
-						<section>
-							<h4>:hover</h4>
-							<p>Style an element when it's hovered over.</p>
-							<pre><code data-trim>
+						<h4>:hover</h4>
+						<p>Style an element when it's hovered over.</p>
+						<pre><code data-trim>
       button:hover {
         background-color: green;
       }</code></pre>
-						</section>
-						<section>
-							<h4>:has</h4>
-							<p>Select elements containing specific descendants.</p>
-							<pre><code data-trim>
+					</section>
+					<section>
+						<h4>:has</h4>
+						<p>Select elements containing specific descendants.</p>
+						<pre><code data-trim>
       div:has(> p.special) {
         border: 2px solid blue;
       }</code></pre>
-						</section>
-						<section>
-							<h4>::selection</h4>
-							<p>Style the portion of an element that is selected by a user.</p>
-							<pre><code data-trim>
+					</section>
+					<section>
+						<h4>::selection</h4>
+						<p>Style the portion of an element that is selected by a user.</p>
+						<pre><code data-trim>
       ::selection {
         color: white;
         background: black;
       }</code></pre>
-						</section>
+					</section>
+					<section>
+						<a
+							href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors"
+							>CSS selectors</a
+						>
 					</section>
 				</section>
 			</div>

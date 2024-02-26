@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<title>Ironhack - Introduction</title>
+
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<link rel="stylesheet" href="../../dist/reveal.css" />
+		<link rel="stylesheet" href="../../dist/theme/moon.css" />
+		<link rel="stylesheet" href="../../plugin/highlight/monokai.css" />
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section
+					data-background-image="https://media1.tenor.com/m/mfJimYfYYgsAAAAC/css-king.gif">
+					<h3>CSS:</h3>
+					<ul>
+						<li style="font-weight: 700">
+							<a href="./index.html" 
+								>CSS Box Model</a
+							>
+						</li>
+						<li><a href="./selectors-advanced.html">Advanced Selectors</a></li>
+						<li><a style="color: greenyellow" href="#">Responsive Design</a></li>
+						<li><a href="./flexbox.html">Flexbox</a></li>
+					</ul>
+				</section>
+				<section>
+					<section>
+            <h2>Responsive Web Design (RWD)</h2>
+        </section>
+        <section>
+            <h3>What's RWD?</h3>
+            <p>RWD makes your web page look good on all devices, ensuring a seamless experience for users regardless of their device.</p>
+        </section>
+        <section>
+            <h3>Mobile-First Approach</h3>
+            <p>Design with a mobile-first approach, then scale up for larger screens. This strategy helps in prioritizing content and usability for mobile users.</p>
+        </section>
+    </section>
+
+    <section>
+        <section>
+            <h2>CSS Media Queries</h2>
+        </section>
+        <section>
+            <h3>Adapting to Screen Sizes</h3>
+            <p>Media queries allow your website to adapt to different screen sizes, ensuring a responsive layout across devices.</p>
+            <pre><code>@media (width &lt; 600px) {
+body { 
+  background-color: lavender; 
+  }
+}
+
+@media (max-width: 600px) {
+  body { 
+    background-color: lavender; 
+  }
+}
+</code></pre>
+            <p>This example changes the background color for screens smaller than 600px.</p>
+        </section>
+    </section>
+
+    <section>
+        <section>
+            <h2>Absolute vs. Relative Units</h2>
+        </section>
+        <section>
+            <h3>Choosing the Right Unit</h3>
+            <p>Using the right units is crucial for a responsive design. Absolute units are fixed, while relative units adjust based on other elements, offering more flexibility.</p>
+        </section>
+    </section>
+
+    <section>
+        <section>
+            <h2>Using Relative Units</h2>
+        </section>
+        <section>
+            <h3>em and rem</h3>
+            <p>Relative units like em and rem are preferable for text size since they allow the text to scale based on user settings or device requirements.</p>
+            <pre><code>body { font-size: 1.2rem; }</code></pre>
+            <p>This code sets the base font size of the body element to 1.2rem, enhancing readability across devices.</p>
+        </section>
+    </section>
+
+    <section>
+        <section>
+            <h2>Inspecting with Chrome DevTools</h2>
+        </section>
+        <section>
+            <h3>Testing Responsiveness</h3>
+            <p>Chrome DevTools is a powerful tool to test and adjust designs for various screen sizes and resolutions.</p>
+            <p>Press <kbd>F12</kbd> to open DevTools and use its device simulation feature to test your design.</p>
+        </section>
+    </section>
+
+    <section>
+        <section>
+            <h2>Summary</h2>
+        </section>
+        <section>
+            <p>Responsive Web Design ensures your site is accessible and user-friendly across all devices. By employing a mobile-first approach, utilizing media queries, and choosing the correct units, you can create a flexible and responsive web design. Chrome DevTools further aids in testing and refining your designs. Remember, the goal is to provide a seamless user experience regardless of the device.</p>
+        </section>
+			</div>
+		</div>
+
+		<script src="../../dist/reveal.js"></script>
+		<script src="../../plugin/highlight/highlight.js"></script>
+
+		<script>
+			Reveal.initialize({
+				// center: true,
+				hash: true,
+				plugins: [RevealHighlight],
+			})
+		</script>
+	</body>
+</html>

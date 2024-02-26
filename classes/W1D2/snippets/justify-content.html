@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			em {
+				color: white;
+			}
+			.container {
+				padding: 0.5rem;
+				border: 1px solid white;
+				background-color: rgb(77, 21, 77);
+				display: flex;
+				height: 100px;
+			}
+			.center {
+				justify-content: center;
+			}
+			.start {
+				justify-content: flex-start;
+			}
+			.end {
+				justify-content: flex-end;
+			}
+			.between {
+				justify-content: space-between;
+			}
+			.evenly {
+				justify-content: space-evenly;
+			}
+			.around {
+				justify-content: space-around;
+			}
+			.box {
+				background-color: rgb(223, 110, 69);
+				height: 50px;
+				aspect-ratio: 1;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				border: 1px solid black;
+			}
+		</style>
+		<em>justify-content: flex-start</em>
+		<div class="container start">
+			<div class="box">1</div>
+			<div class="box">2</div>
+			<div class="box">3</div>
+			<div class="box">4</div>
+		</div>
+		<em>justify-content: center</em>
+		<div class="container center">
+			<div class="box">1</div>
+			<div class="box">2</div>
+			<div class="box">3</div>
+			<div class="box">4</div>
+		</div>
+		<em>justify-content: flex-end</em>
+		<div class="container end">
+			<div class="box">1</div>
+			<div class="box">2</div>
+			<div class="box">3</div>
+			<div class="box">4</div>
+		</div>
+		<em>justify-content: space-between</em>
+		<div class="container between">
+			<div class="box">1</div>
+			<div class="box">2</div>
+			<div class="box">3</div>
+			<div class="box">4</div>
+		</div>
+		<em>justify-content: space-evenly</em>
+		<div class="container evenly">
+			<div class="box">1</div>
+			<div class="box">2</div>
+			<div class="box">3</div>
+			<div class="box">4</div>
+		</div>
+		<em>justify-content: space-around</em>
+		<div class="container around">
+			<div class="box">1</div>
+			<div class="box">2</div>
+			<div class="box">3</div>
+			<div class="box">4</div>
+		</div>
+	</body>
+</html>
