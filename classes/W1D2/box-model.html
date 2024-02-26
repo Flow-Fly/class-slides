@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<title>Ironhack - Box Model</title>
+
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<link rel="stylesheet" href="../../dist/reveal.css" />
+		<link rel="stylesheet" href="../../dist/theme/moon.css" />
+		<link rel="stylesheet" href="../../plugin/highlight/monokai.css" />
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>The Box Model</h2>
+				</section>
+				<section>
+					<h3>Understanding the Box Model</h3>
+					<p>
+						Every element is encased in a box that includes: margins, borders,
+						padding, and the actual content.
+					</p>
+					<img src="./images/box-model.png" alt="CSS Box Model Diagram" />
+				</section>
+				<section>
+					<h3>Applying Margins, Borders, and Padding</h3>
+					<p>Control the space around and within elements.</p>
+					<pre><code data-trim data-noescape>
+      div {
+        margin: 20px;
+        border: 5px solid black;
+        padding: 10px;
+      }</code></pre>
+				</section>
+				<section>
+					<h3>Border Radius</h3>
+					<p>Round corners or create circles.</p>
+					<pre><code data-trim data-noescape>
+      .circle {
+        border-radius: 50%;
+      }</code></pre>
+				</section>
+				<section>
+					<h3>Box Sizing: Border-Box</h3>
+					<p>
+						Include padding and border in the element's total width and height.
+					</p>
+					<pre><code data-trim data-noescape>
+      * {
+        box-sizing: border-box;
+      }</code></pre>
+				</section>
+				<section>
+					<h3>Impact on Layout</h3>
+					<p>
+						Understanding how margin, padding, and border affect layout is
+						crucial for precise design.
+					</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="../../dist/reveal.js"></script>
+		<script src="../../plugin/highlight/highlight.js"></script>
+
+		<script>
+			Reveal.initialize({
+				// center: true,
+				hash: true,
+				plugins: [RevealHighlight],
+			})
+		</script>
+	</body>
+</html>

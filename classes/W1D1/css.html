@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<title>Ironhack - Introduction</title>
+
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<link rel="stylesheet" href="../../dist/reveal.css" />
+		<link rel="stylesheet" href="../../dist/theme/moon.css" />
+		<link rel="stylesheet" href="../../plugin/highlight/monokai.css" />
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<section>
+						<h2>Introduction to CSS</h2>
+						<p>
+							CSS (Cascading Style Sheets) styles the visual presentation of
+							HTML documents.
+						</p>
+						<p>
+							In order to make your CSS file work, you need to link it to your
+							html.
+						</p>
+					</section>
+					<section data-auto-animate>
+						<pre data-id="link-html-css"><code data-trim >
+<!-- html file -->
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+	&lt;head&gt;
+    &lt;title&gt;Linking HTML and CSS&lt;/title&gt;    
+&lt;/head&gt;
+&lt;body&gt;
+  <!-- ... -->
+&lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
+					</section>
+					<section data-auto-animate>
+						<pre data-id="link-html-css"><code data-trim>
+<!-- html file -->
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+	&lt;head&gt;
+    &lt;title&gt;Linking HTML and CSS&lt;/title&gt;
+    &lt;link rel="stylesheet" href="./my-css.css" /&gt; 
+&lt;/head&gt;
+&lt;body&gt;
+  <!-- ... -->
+&lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
+					</section>
+				</section>
+				<section>
+					<h2>CSS Selectors</h2>
+					<section>
+						<h3>Element Selector</h3>
+						<p>Targets HTML elements directly.</p>
+						<pre><code data-trim>
+      h1 {
+        color: red;
+      }</code></pre>
+					</section>
+					<section>
+						<h3>Class Selector</h3>
+						<p>
+							Targets element<span style="color: red">s</span> with a specific
+							class attribute.
+						</p>
+						<pre><code data-trim>
+      .highlight {
+        background-color: yellow;
+      }</code></pre>
+					</section>
+					<section>
+						<h3>ID Selector</h3>
+						<p>
+							Targets an element with a specific id attribute. IDs are unique.
+						</p>
+						<p>❗️ ID have a stronger specificity than class selector</p>
+						<pre><code data-trim>
+      #main-title {
+        font-size: 24px;
+      }</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<h2>Colors in CSS</h2>
+					<section>
+						<h3>Font & Background Colors</h3>
+						<p>
+							Colors can be set using names, HEX, RGB, or
+							<a
+								href="https://developer.mozilla.org/fr/docs/Web/CSS/color_value/hsl"
+								>HSL</a
+							>
+							values.
+						</p>
+						<pre><code data-trim data-noescape>
+      p {
+        color: blue; /* Font color */
+        background-color: #f0f0f0; /* Background color */
+        background-color: rgb(127, 0, 54)
+        background-color: hsl(124, 30%, 70%)
+      }</code></pre>
+					</section>
+				</section>
+				<section>
+					<h2>CSS Units</h2>
+					<section>
+						<h4>px (Pixels)</h4>
+						<p>Precise control over element sizing.</p>
+						<p><strong>Best For:</strong> Exact sizing (borders, shadows).</p>
+					</section>
+					<section>
+						<h4>% (Percentage)</h4>
+						<p>
+							Relative to the parent element's size, great for responsiveness.
+						</p>
+						<p>
+							<strong>Best For:</strong> elements that needs to have their size
+							defined by the parent.
+						</p>
+					</section>
+					<section>
+						<h4>vh/vw (Viewport Height/Width)</h4>
+						<p>Relative to the viewport's size for responsive designs.</p>
+						<p>
+							<strong>Best For:</strong> elements that should take a specific
+							amount of screen size.
+						</p>
+					</section>
+					<section>
+						<h4>rem (Root EM)</h4>
+						<p>
+							Relative to the root element's font-size, ideal for typography and
+							spacing.
+						</p>
+						<p><strong>Best For:</strong> Font sizes, scalable spacing.</p>
+					</section>
+
+					<section>
+						<p>
+							There's no one-size-fits-all answer. A combination of units
+							tailored to your needs is often best:
+						</p>
+						<ul>
+							<li>
+								<strong>Responsive Design:</strong> Use %, vh/vw, and rem for
+								flexible layouts.
+							</li>
+							<li>
+								<strong>Accessibility:</strong> rem units help respect user
+								settings for text size.
+							</li>
+							<li>
+								<strong>Precision:</strong> px units are useful for exact
+								control where necessary.
+							</li>
+						</ul>
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="../../dist/reveal.js"></script>
+		<script src="../../plugin/highlight/highlight.js"></script>
+
+		<script>
+			Reveal.initialize({
+				// center: true,
+				hash: true,
+				plugins: [RevealHighlight],
+			})
+		</script>
+	</body>
+</html>

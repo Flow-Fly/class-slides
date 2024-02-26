@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<title>Ironhack - Introduction</title>
+
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<link rel="stylesheet" href="../../dist/reveal.css" />
+		<link rel="stylesheet" href="../../dist/theme/moon.css" />
+		<link rel="stylesheet" href="../../plugin/highlight/monokai.css" />
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>Introduction to Version Control</h2>
+					<p>
+						A system that records changes to a file or set of files over time.
+					</p>
+				</section>
+
+				<section>
+					<h2>Why Git?</h2>
+					<p>
+						Git supports distributed workflows, enabling collaboration among
+						teams.
+					</p>
+				</section>
+
+				<section>
+					<h2>Creating a local Repository</h2>
+					<pre><code>git init</code></pre>
+					<p>Initializes a new local Git repository.</p>
+					<p>❗️ It will be initialized in your <code>pwd</code></p>
+				</section>
+
+				<section>
+					<h2>Checking Status</h2>
+					<pre><code>git status</code></pre>
+					<p>Displays the state of the working directory and staging area.</p>
+				</section>
+
+				<section>
+					<h2>Staging Files</h2>
+					<pre><code>git add &lt;filename&gt;</code></pre>
+					<p>Adds files to the staging area, preparing them for commit.</p>
+				</section>
+
+				<section>
+					<h2>Committing Changes</h2>
+					<pre><code>git commit -m "Commit message"</code></pre>
+					<p>Records file snapshots in the version history.</p>
+				</section>
+
+				<section>
+					<h2>Understanding the Git Log</h2>
+					<pre><code>git log</code></pre>
+					<p>Displays the commit logs.</p>
+				</section>
+
+				<section>
+					<h2>Working with GitHub</h2>
+					<section>
+						<h3>Creating a Repo on GitHub</h3>
+						<p>Create and clone a repository from GitHub.</p>
+					</section>
+					<section>
+						<h3>Adding Files</h3>
+						<pre><code>git add .</code></pre>
+						<p>Adds all changed files to the staging area.</p>
+					</section>
+					<section>
+						<h3>Committing Files</h3>
+						<pre><code>git commit -m "Your message"</code></pre>
+						<p>Commits your staged content as a new commit snapshot.</p>
+					</section>
+					<section>
+						<h3>Pushing to GitHub</h3>
+						<pre><code>git push origin main</code></pre>
+						<p>Uploads all local branch commits to the remote repository.</p>
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="../../dist/reveal.js"></script>
+		<script src="../../plugin/highlight/highlight.js"></script>
+
+		<script>
+			Reveal.initialize({
+				// center: true,
+				hash: true,
+				plugins: [RevealHighlight],
+			})
+		</script>
+	</body>
+</html>

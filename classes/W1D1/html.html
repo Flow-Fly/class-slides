@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<title>Ironhack - Introduction</title>
+
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<link rel="stylesheet" href="../../dist/reveal.css" />
+		<link rel="stylesheet" href="../../dist/theme/moon.css" />
+		<link rel="stylesheet" href="../../plugin/highlight/monokai.css" />
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>HTML Document Structure</h2>
+					<p>
+						An HTML document has a defined structure:
+						<code>&lt;!DOCTYPE html&gt;</code>, <code>&lt;html&gt;</code>,
+						<code>&lt;head&gt;</code>, and <code>&lt;body&gt;</code>.
+					</p>
+					<pre><code>&lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+  &lt;head&gt;
+      &lt;title&gt;Page Title&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+      &lt;h1&gt;My First Heading&lt;/h1&gt;
+      &lt;p&gt;My first paragraph.&lt;/p&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;</code></pre>
+				</section>
+
+				<section>
+					<h2>Inline vs Block Elements</h2>
+					<section>
+						<h3>Block Elements</h3>
+						<p>
+							Block elements start on a new line. E.g.,
+							<code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>.
+						</p>
+						<pre><code>&lt;div&gt;Block-level element&lt;/div&gt;</code></pre>
+					</section>
+					<section>
+						<h3>Inline Elements</h3>
+						<p>
+							Inline elements don't start on a new line. E.g.,
+							<code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>.
+						</p>
+						<pre><code data-noescape data-trim>&lt;span&gt;Inline element&lt;/span&gt;</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<h2>Creating a Simple Webpage</h2>
+					<p>Combine block and inline elements to structure content.</p>
+					<pre><code>&lt;div&gt;
+      &lt;h2&gt;Page Title&lt;/h2&gt;
+      &lt;p&gt;This is a paragraph in a div block element. &lt;a href="#"&gt;This is an inline link&lt;/a&gt;.&lt;/p&gt;
+  &lt;/div&gt;</code></pre>
+				</section>
+			</div>
+		</div>
+
+		<script src="../../dist/reveal.js"></script>
+		<script src="../../plugin/highlight/highlight.js"></script>
+
+		<script>
+			Reveal.initialize({
+				// center: true,
+				hash: true,
+				plugins: [RevealHighlight],
+			})
+		</script>
+	</body>
+</html>
