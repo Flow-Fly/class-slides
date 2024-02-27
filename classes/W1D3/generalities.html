@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<title>Ironhack - Introduction</title>
+
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<link rel="stylesheet" href="../../dist/reveal.css" />
+		<link rel="stylesheet" href="../../dist/theme/moon.css" />
+		<link rel="stylesheet" href="../../plugin/highlight/monokai.css" />
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section
+					data-background-image="https://b1694534.smushcdn.com/1694534/wp-content/uploads/2021/06/variable.jpeg">
+					<h3>JavaScript Intro:</h3>
+					<ul>
+						<li>
+							<a href="./index.html">JS History</a>
+						</li>
+						<li>
+							<a href="#" style="color: greenyellow">Generalities</a>
+						</li>
+						<li>
+							<a href="./numbers.html">Numbers</a>
+						</li>
+						<li>
+							<a href="./strings.html">Strings</a>
+						</li>
+						<li>
+							<a href="./booleans.html">Booleans</a>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Welcome to JavaScript!</h2>
+					<pre><code data-trim data-noescape data-line-numbers>
+
+          // Primitive types: numbers, string, boolean, null, undefined
+          // Non-primitive types: object, array, function
+
+          let myName = "Florian";
+          const π = 3.14;
+
+          </code></pre>
+				</section>
+
+				<section>
+					<h2>Variables and Types</h2>
+					<pre><code data-trim data-noescape data-line-numbers >
+          let aNumber = 5.3;
+          const isItSunny = true;
+          let anEmptyVariable;
+          console.log(anEmptyVariable); // undefined
+          anEmptyVariable = 5;
+          console.log(anEmptyVariable); // 5
+      
+          // typeof variables
+          console.log(typeof aNumber); // "number"
+          console.log(typeof isItSunny); // "boolean"
+          </code></pre>
+				</section>
+
+				<section>
+					<h2>Naming Variables</h2>
+					<pre><code data-trim data-noescape data-line-numbers>
+          // camelCase is preferred in JavaScript
+          let myVariableName;
+          // Other examples: snake_case, PascalCase, but camelCase is standard
+          </code></pre>
+				</section>
+
+				<section>
+					<h2>Understanding Const and Let</h2>
+					<pre><code data-trim data-noescape data-line-numbers>
+          const fixedValue = "Cannot be changed";
+          let variableValue = "Can be changed";
+          variableValue = "New Value"; // This is allowed
+          // fixedValue = "Try changing"; // This will cause an error
+          </code></pre>
+				</section>
+
+				<section>
+					<h2>Binary & Hexadecimal</h2>
+					<pre><code data-trim data-noescape data-line-numbers>
+          // Binary example: 0b1010 equals 10
+          // Hexadecimal example: 0xF equals 15
+          </code></pre>
+				</section>
+			</div>
+		</div>
+
+		<script src="../../dist/reveal.js"></script>
+		<script src="../../plugin/highlight/highlight.js"></script>
+
+		<script>
+			Reveal.initialize({
+				// center: true,
+				hash: true,
+				plugins: [RevealHighlight],
+			})
+		</script>
+	</body>
+</html>

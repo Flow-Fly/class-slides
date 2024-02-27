@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<title>Ironhack - Introduction</title>
+
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<link rel="stylesheet" href="../../dist/reveal.css" />
+		<link rel="stylesheet" href="../../dist/theme/moon.css" />
+		<link rel="stylesheet" href="../../plugin/highlight/monokai.css" />
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section
+					data-background-image="https://b1694534.smushcdn.com/1694534/wp-content/uploads/2021/06/variable.jpeg">
+					<h3>JavaScript Intro:</h3>
+					<ul>
+						<li>
+							<a href="./index.html">JS History</a>
+						</li>
+						<li>
+							<a href="./generalities.html">Generalities</a>
+						</li>
+						<li>
+							<a href="./numbers.html">Numbers</a>
+						</li>
+						<li>
+							<a href="./strings.html">Strings</a>
+						</li>
+						<li>
+							<a style="color: greenyellow" href="#">Booleans</a>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Understanding Booleans</h3>
+					<p>
+						Booleans represent logical entities and can only be
+						<code>true</code> or <code>false</code>.
+					</p>
+				</section>
+
+				<section>
+					<h3>Boolean Operations</h3>
+					<p>
+						Common logical operations include AND (<code>&&</code>), OR
+						(<code>||</code>), and NOT (<code>!</code>).
+					</p>
+					<pre><code data-trim data-noescape data-line-numbers>
+      // AND operation
+      console.log(true && true); // true
+      console.log(true && false); // false
+      
+      // OR operation
+      console.log(true || false); // true
+      console.log(false || false); // false
+          </code></pre>
+				</section>
+				<section>
+					<h3>NOT Operator</h3>
+					<p>The NOT operator (<code>!</code>) negates a Boolean value.</p>
+					<pre><code data-trim data-noescape data-line-numbers>
+      console.log(!true); // false
+      console.log(!false); // true
+          </code></pre>
+				</section>
+
+				<section>
+					<h3>Comparison Operators</h3>
+					<p>Booleans are often the result of comparisons:</p>
+					<ul>
+						<li>Greater than: <code>></code></li>
+						<li>Less than: <code>&lt;</code></li>
+						<li>Greater or equal: <code>>=</code></li>
+						<li>Less or equal: <code>&lt;=</code></li>
+						<li>Loose equality: <code>==</code></li>
+						<li>Strict equality: <code>===</code></li>
+						<li>Loose inequality: <code>!=</code></li>
+						<li>Strict inequality: <code>!==</code></li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Truthiness and Falsiness</h3>
+					<p>
+						In JavaScript, values can be "truthy" or "falsy", influencing
+						boolean logic beyond simple <code>true</code> or <code>false</code>.
+					</p>
+					<pre><code data-trim data-noescape data-line-numbers>
+      // Truthy examples
+      console.log(Boolean(true)); // true
+      console.log(Boolean("string")); // true
+      
+      // Falsy examples
+      console.log(Boolean(false)); // false
+      console.log(Boolean(0)); // false
+          </code></pre>
+					<p>
+						Understanding the truthiness or falsiness of different values is
+						crucial for control flow and logic in JavaScript.
+					</p>
+				</section>
+
+				<section>
+					<h3>Converting to Boolean</h3>
+					<p>
+						JavaScript provides the <code>Boolean</code> function to explicitly
+						convert values to boolean.
+					</p>
+					<pre><code data-trim data-noescape data-line-numbers>
+      // Conversion examples
+      console.log(Boolean(-2)); // true
+      console.log(Boolean(undefined)); // false
+          </code></pre>
+					<p>
+						Numerical values, strings, arrays, and objects are generally
+						"truthy", whereas <code>0</code>, <code>""</code> (empty string),
+						<code>null</code>, <code>undefined</code>, and <code>NaN</code> are
+						"falsy".
+					</p>
+				</section>
+				<section>
+					<h3>Null and Undefined</h3>
+					<p>
+						<code>null</code> is an assignment value that represents the
+						intentional absence of any object value. <code>undefined</code> is a
+						property of the global object, representing the primitive value
+						undefined.
+					</p>
+					<pre><code data-trim data-noescape data-line-numbers>
+      let unassigned;
+      console.log(unassigned); // undefined
+      
+      let empty = null;
+      console.log(empty); // null
+          </code></pre>
+					<p>
+						Use <code>null</code> to represent a deliberate non-value and
+						<code>undefined</code> to indicate variables not yet initialized.
+					</p>
+				</section>
+				<section>
+					<h3>Immutability of Primitive Data Types</h3>
+					<p>
+						In JavaScript, primitive data types (like numbers, strings, and
+						Booleans) are immutable. This means that once a primitive value is
+						created, it cannot be altered.
+					</p>
+					<pre><code data-trim data-noescape data-line-numbers>
+      let name = "Jane";
+      name[0] = "L"; // Attempt to change the first character
+      console.log(name); // "Jane"
+          </code></pre>
+					<p>
+						Variables can be reassigned to new values, but the original value
+						itself cannot be changed.
+					</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="../../dist/reveal.js"></script>
+		<script src="../../plugin/highlight/highlight.js"></script>
+
+		<script>
+			Reveal.initialize({
+				// center: true,
+				hash: true,
+				plugins: [RevealHighlight],
+			})
+		</script>
+	</body>
+</html>

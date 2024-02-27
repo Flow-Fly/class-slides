@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<title>Ironhack - Introduction</title>
+
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<link rel="stylesheet" href="../../dist/reveal.css" />
+		<link rel="stylesheet" href="../../dist/theme/moon.css" />
+		<link rel="stylesheet" href="../../plugin/highlight/monokai.css" />
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section
+					data-background-image="https://b1694534.smushcdn.com/1694534/wp-content/uploads/2021/06/variable.jpeg">
+					<h3>JavaScript Intro:</h3>
+					<ul>
+						<li>
+							<a href="./index.html">JS History</a>
+						</li>
+						<li>
+							<a href="./generalities.html">Generalities</a>
+						</li>
+						<li>
+							<a style="color: greenyellow" href="#">Numbers</a>
+						</li>
+						<li>
+							<a href="./strings.html">Strings</a>
+						</li>
+						<li>
+							<a href="./booleans.html">Booleans</a>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Let's Talk About Math</h2>
+				</section>
+
+				<section>
+					<h2>Operators</h2>
+					<ul>
+						<li>Addition: <code>+</code></li>
+						<li>Subtraction: <code>-</code></li>
+						<li>Multiply: <code>*</code></li>
+						<li>Division: <code>/</code></li>
+						<li>Power of: <code>**</code></li>
+						<li>Modulo: <code>%</code></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Basic Calculation</h2>
+					<pre><code data-trim data-noescape data-line-numbers>
+      let result = 3 * (5 + 2)
+      // result = 21
+      </code></pre>
+					<pre><code data-trim data-noescape data-line-numbers>let remainder = 3 % 2
+      </code></pre>
+				</section>
+
+				<section>
+					<h2>Working with Time</h2>
+					<pre><code data-trim data-noescape data-line-numbers>
+      const amountOfSeconds = 2045
+      const amountOfMinutes = amountOfSeconds / 60
+      console.log(Math.floor(amountOfMinutes))
+      console.log(amountOfSeconds % 60)
+      </code></pre>
+				</section>
+
+				<section>
+					<h2>Math Functions</h2>
+					<pre><code data-trim data-noescape data-line-numbers>
+      console.log(Math.floor(4.7))
+      console.log(Math.ceil(4.2))
+      console.log(Math.round(4.5))
+      </code></pre>
+				</section>
+
+				<section>
+					<h2>Shorthand Math & Math Constructor</h2>
+					<pre><code data-trim data-noescape data-line-numbers>
+      let total = 1
+      total += 2
+      total *= 5
+      total /= 3
+      console.log(total.toFixed(2))
+      console.log(Math.PI)
+      </code></pre>
+				</section>
+
+				<section>
+					<section>
+						<h2>Generating Random Integers: Step by Step</h2>
+						<p>
+							Let's break down the process of generating a random integer
+							between 0 and 9, demonstrating the order of operations:
+						</p>
+            </section>
+
+						<section>
+              <ol>
+                <li class="fragment">
+                  Generate a random floating-point number between 0 (inclusive)
+                  and 1 (exclusive).
+                  <ul class="fragment"><li><code>0.26</code></li></ul>
+                </li>
+                <li class="fragment">Multiply this number by 10 to scale it up. <ul class="fragment"><li><code>2.6</code></li></ul></li>
+                <li class="fragment">
+                  Use <code>Math.floor()</code> to round down to the nearest whole
+                  number, ensuring it's an integer.<ul class="fragment"><li><code>2</code></li></ul>
+                </li>
+              </ol>
+            </section>
+
+              <section data-auto-animate data-auto-animate-id="random">
+                <pre><code data-trim data-noescape data-line-numbers>
+                      const randomInt = Math.floor(Math.random() * 10)
+                      console.log(randomInt)
+                      </code></pre>
+                            <p>
+                              This gives us a random integer from 0 to 9. Now, let's explore
+                              each step in detail:
+                            </p>
+              </section>
+              <section data-auto-animate data-auto-animate-id="random">
+                <pre><code data-trim data-noescape data-line-numbers>
+                      const randomInt = Math.floor(Math.random() * 10)
+                      </code></pre>
+                      <pre class="fragment"><code data-trim data-noescape data-line-numbers>
+                        const randomInt = Math.floor(0.5750300344328242 * 10)
+                        </code></pre>
+
+              </section>
+              <section data-auto-animate data-auto-animate-id="random">
+                <pre><code data-trim data-noescape data-line-numbers>
+                      const randomInt = Math.floor(Math.random() * 10)
+                      </code></pre>
+                      <pre><code data-trim data-noescape data-line-numbers>
+                        const randomInt = Math.floor(0.5750300344328242 * 10)
+                        const randomInt = Math.floor(5.750300344328242)
+                        </code></pre>
+
+              </section>
+              <section data-auto-animate data-auto-animate-id="random">
+                <pre><code data-trim data-noescape data-line-numbers>
+                      const randomInt = Math.floor(Math.random() * 10)
+                      </code></pre>
+                      <pre><code data-trim data-noescape data-line-numbers>
+                        const randomInt = Math.floor(0.5750300344328242 * 10)
+                        const randomInt = Math.floor(5.750300344328242)
+                        const randomInt = 5
+                        </code></pre>
+                        <p class="fragment">This shows us that the order of operations used at school is important to understand programming</p>
+              </section>
+            
+					</section>
+				</section>
+
+				<section>
+					<h2>Operations Between Numbers and Strings</h2>
+					<pre><code data-trim data-noescape data-line-numbers>
+      console.log("2" + 1)
+      console.log("3" - 1)
+      console.log(Number((1 / 3).toFixed(2)) + 1)
+      </code></pre>
+				</section>
+
+				<section>
+          <section>
+            <h2>Incrementing / Decrementing Numbers</h2>
+            <pre><code data-trim data-noescape data-line-numbers>
+        let increment = 1
+        console.log(increment++)
+        console.log(increment)
+        increment--
+        </code></pre>
+
+          </section>
+
+          <section>
+            <h2>Post vs. Pre Incrementation</h2>
+            <ul>
+                <li><strong>Post-incrementation</strong> (<code>variable++</code> or <code>variable--</code>)</li>
+                <li><strong>Pre-incrementation</strong> (<code>++variable</code> or <code>--variable</code>)</li>
+            </ul>
+          </section>
+          <section>
+            <pre><code data-trim data-noescape data-line-numbers>
+        let postIncrement = 0;
+        console.log(postIncrement++); // Prints 0, then increments
+        console.log(postIncrement); // Prints 1
+        
+        let preIncrement = 0;
+        console.log(++preIncrement); // Increments first, then prints 1
+        console.log(preIncrement); // Prints 1
+
+        </code></pre>
+            <p>This distinction is a niche but it might prove useful sometime.</p>
+        </section>
+        
+				</section>
+			</div>
+		</div>
+
+		<script src="../../dist/reveal.js"></script>
+		<script src="../../plugin/highlight/highlight.js"></script>
+
+		<script>
+			Reveal.initialize({
+				// center: true,
+				hash: true,
+				plugins: [RevealHighlight],
+			})
+		</script>
+	</body>
+</html>
