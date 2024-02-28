@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<title>Ironhack - Introduction</title>
+
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<link rel="stylesheet" href="../../dist/reveal.css" />
+		<link rel="stylesheet" href="../../dist/theme/moon.css" />
+		<link rel="stylesheet" href="../../plugin/highlight/monokai.css" />
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-image="">
+					<h3>Functions:</h3>
+					<ul>
+						<li>
+							<a href="./index.html">Conditions</a>
+						</li>
+
+						<li>
+							<a href="./functions.html">Functions</a>
+						</li>
+						<li>
+							<a href="./arrays.html">Arrays</a>
+						</li>
+						<li>
+							<a href="#">Objects</a>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Introduction to Objects</h3>
+					<p>
+						Objects are collections of key-value pairs. They are used to store
+						various keyed collections and more complex entities.
+					</p>
+				</section>
+				<section>
+					<h3>Creating Objects</h3>
+					<pre><code data-trim data-noescape>
+        const user = {
+          name: "Bob"
+        };
+            </code></pre>
+					<p>
+						Use curly braces <code>{}</code> to create objects, with key-value
+						pairs inside.
+					</p>
+				</section>
+				<section>
+					<h3>Accessing Object Properties</h3>
+					<pre><code data-trim data-noescape>
+        const user = {
+          name: "Bob"
+        };
+        console.log(user.name); // Dot notation
+        console.log(user["name"]); // Bracket notation
+            </code></pre>
+					<p>
+						Use dot notation or bracket notation to access properties of an
+						object.
+					</p>
+				</section>
+				<section>
+					<h3>Adding Properties</h3>
+					<pre><code data-trim data-noescape>
+        const user = {
+          name: "Bob"
+        };
+        user.age = 30;
+        // user : { name: "Bob", age: 30 }
+            </code></pre>
+					<p>
+						Add new properties to an object by simply assigning a value to a new
+						key.
+					</p>
+				</section>
+				<section>
+					<h3>Deleting Properties</h3>
+					<pre><code data-trim data-noescape>
+        delete user.age;
+        // user: { name: "Bob" }
+            </code></pre>
+					<p>
+						Remove properties from an object using the
+						<code>delete</code> keyword.
+					</p>
+				</section>
+				<section>
+					<h3>Listing Keys and Values</h3>
+					<pre><code data-trim data-noescape>
+        console.log(Object.keys(user)); // Lists keys
+        console.log(Object.values(user)); // Lists values
+            </code></pre>
+					<p>
+						Use <code>Object.keys()</code> and <code>Object.values()</code> to
+						list an object's keys and values.
+					</p>
+				</section>
+				<section>
+					<h3>Iterating Over Objects</h3>
+					<pre><code data-trim data-noescape>
+        for (const key in user) {
+          console.log(key, user[key]);
+        }
+            </code></pre>
+					<p>
+						Use a <code>for...in</code> loop to iterate over an object's
+						properties.
+					</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="../../dist/reveal.js"></script>
+		<script src="../../plugin/highlight/highlight.js"></script>
+
+		<script>
+			Reveal.initialize({
+				// center: true,
+				hash: true,
+				plugins: [RevealHighlight],
+			})
+		</script>
+	</body>
+</html>

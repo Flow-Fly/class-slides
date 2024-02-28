@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<title>Ironhack - Introduction</title>
+
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<link rel="stylesheet" href="../../dist/reveal.css" />
+		<link rel="stylesheet" href="../../dist/theme/moon.css" />
+		<link rel="stylesheet" href="../../plugin/highlight/monokai.css" />
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-image="">
+					<h3>Functions:</h3>
+					<ul>
+						<li>
+							<a href="./index.html">Conditions</a>
+						</li>
+
+						<li>
+							<a href="./functions.html">Functions</a>
+						</li>
+						<li>
+							<a href="#">Arrays</a>
+						</li>
+						<li>
+							<a href="./objects.html">Objects</a>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Introduction to Arrays</h3>
+					<p>
+						Arrays are used to store multiple values in a single variable,
+						allowing for efficient data management and access.
+					</p>
+				</section>
+
+				<section>
+					<h3>Creating and Accessing Arrays</h3>
+					<p>
+						Create arrays to store various items and access them using their
+						index.
+					</p>
+					<pre><code data-trim data-noescape>
+        const fridge = ["Tomatoes", "Eggs", "Milk"];
+        console.log(fridge[0]); // Accessing the first item
+          </code></pre>
+				</section>
+
+				<section>
+					<h3>Adding Items to an Array</h3>
+					<p>
+						Use <code>push</code> to add items to the end and
+						<code>unshift</code> to add to the beginning.
+					</p>
+					<pre><code data-trim data-noescape>
+        fridge.push("Cheese"); // Adds to the end
+        fridge.unshift("Butter"); // Adds to the beginning
+          </code></pre>
+				</section>
+
+				<section>
+					<h3>Removing Items from an Array</h3>
+					<p>
+						<code>pop</code> removes the last item, and
+						<code>shift</code> removes the first item. Use
+						<code>splice</code> for specific indices.
+					</p>
+					<pre><code data-trim data-noescape>
+        fridge.pop(); // Removes the last item
+        fridge.shift(); // Removes the first item
+          </code></pre>
+				</section>
+
+				<section>
+					<h3>Converting Strings to Arrays</h3>
+					<p>
+						The <code>.split()</code> method turns a string into an array based
+						on a separator.
+					</p>
+					<pre><code data-trim data-noescape>
+      const ingredients = "apples, oranges, bananas";
+      const ingredientsArray = ingredients.split(", ");
+      console.log(ingredientsArray); 
+      // ["apples", "oranges", "bananas"]
+          </code></pre>
+				</section>
+
+				<section>
+					<h3>Understanding Mutability</h3>
+					<p>
+						In JavaScript, objects and arrays are mutable by default, meaning
+						their data can be changed after creation.
+					</p>
+					<pre><code data-trim data-noescape>
+      const myArray = [1, 2, 3];
+      myArray.push(4);
+      console.log(myArray); // [1, 2, 3, 4]
+          </code></pre>
+					<p>
+						This behavior allows for dynamic data manipulation but requires
+						careful handling to avoid unintended side effects.
+					</p>
+				</section>
+
+				<section>
+					<h3>Why Does Mutability Happen?</h3>
+					<p>
+						Mutability occurs because when you manipulate an array or object,
+						you're altering its data directly in memory.
+					</p>
+					<pre><code data-trim data-noescape>
+      // Both variables point to the same array in memory
+      const originalArray = ['a', 'b', 'c'];
+      const newArray = originalArray;
+      
+      // Modifying newArray affects originalArray
+      newArray.push('d');
+      console.log(originalArray); // ['a', 'b', 'c', 'd']
+          </code></pre>
+					<p>
+						This behavior underscores the importance of understanding references
+						in JavaScript to manage and predict changes to your data.
+					</p>
+				</section>
+
+				<section>
+					<h3>Example: Sorting Without Mutation</h3>
+					<p>
+						Sorting can alter the original array. By working with a copy, we
+						maintain the original array's integrity.
+					</p>
+					<pre><code data-trim data-noescape>
+      // Original array
+      const fruits = ["banana", "apple", "orange"];
+      
+      // Making a shallow copy
+      const sortedFruits = [...fruits].sort();
+      
+      console.log(sortedFruits); // Sorted array
+      console.log(fruits); // Original array, unchanged
+          </code></pre>
+					<p>
+						This approach is especially useful in functional programming or any
+						scenario where data immutability is a key concern.
+					</p>
+				</section>
+
+				<section>
+					<h3>Why Make Copies of Arrays?</h3>
+					<p>
+						Creating copies helps preserve the original array, allowing us to
+						apply transformations or methods without altering the original data.
+					</p>
+				</section>
+
+				<section>
+					<h3>Copying Arrays</h3>
+					<p>
+						Copying arrays can be done with the spread operator for a shallow
+						copy or <code>structuredClone</code> for a deep copy.
+					</p>
+					<pre><code data-trim data-noescape>
+        const shallowCopy = [...fridge]; // Shallow copy
+        const deepCopy = structuredClone(matrix); // Deep copy
+          </code></pre>
+				</section>
+
+				<section>
+					<h3>Iterating Over Arrays</h3>
+					<p>
+						Use <code>for</code> loops and <code>forEach</code> method to
+						iterate over array items.
+					</p>
+					<pre><code data-trim data-noescape>
+        fridge.forEach(item => console.log(item)); // Using forEach
+          </code></pre>
+				</section>
+
+				<section>
+					<section data-auto-animate data-auto-animate-id="largest">
+						<h3>Finding the Largest Number in an Array</h3>
+						<p>Demonstrates using a loop to process items in an array.</p>
+						<pre><code data-trim data-noescape data-line-numbers="|1,7|2,6|3,4,5|4">
+				let largestNumber = -Infinity;
+				for (const element of array) {
+					if (element > largestNumber) {
+						largestNumber = element
+					}
+				}
+				console.log(largestNumber);</code></pre>
+					</section>
+					<section data-auto-animate data-auto-animate-id="largest">
+						<h3>Finding the Largest Number in an Array</h3>
+						<p>Demonstrates using a loop to process items in an array.</p>
+						<pre><code data-trim data-noescape data-line-numbers="1|">
+				const array = [-8000, 2, 1700, 624, 1990, -54]
+				let largestNumber = -Infinity;
+				for (const element of array) {
+					if (element > largestNumber) {
+						largestNumber = element
+					}
+				}
+				console.log(largestNumber);</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<h3>Working with Nested Arrays</h3>
+					<p>Use nested loops to process multi-dimensional arrays.</p>
+					<p>Don't get scared of this code snippet 😅</p>
+					<pre><code data-trim data-noescape>
+			let largest = -Infinity;
+			for (let row = 0; row &lt; matrix.length; row++) {
+				for (let col = 0; col &lt; matrix[row].length; col++) {
+					let current = matrix[row][col];
+					if (typeof current === 'number' && current > largest) {
+						largest = current;
+					}
+				}
+			}
+			console.log(largest);</code></pre>
+				</section>
+			</div>
+		</div>
+
+		<script src="../../dist/reveal.js"></script>
+		<script src="../../plugin/highlight/highlight.js"></script>
+
+		<script>
+			Reveal.initialize({
+				// center: true,
+				hash: true,
+				plugins: [RevealHighlight],
+			})
+		</script>
+	</body>
+</html>

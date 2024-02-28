@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<title>Ironhack - Introduction</title>
+
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<link rel="stylesheet" href="../../dist/reveal.css" />
+		<link rel="stylesheet" href="../../dist/theme/moon.css" />
+		<link rel="stylesheet" href="../../plugin/highlight/monokai.css" />
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-image="">
+					<h3>Functions:</h3>
+					<ul>
+						<li>
+							<a href="#">Conditions and Loops</a>
+						</li>
+						<li>
+							<a href="./functions.html">Functions</a>
+						</li>
+						<li>
+							<a href="./arrays.html">Arrays</a>
+						</li>
+						<li>
+							<a href="./objects.html">Objects</a>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h3>What is a Code Statement?</h3>
+					<p>
+						In JavaScript, a statement is an instruction to perform a specific
+						action. Statements are the building blocks of a program, directing
+						the computer to execute operations like calculations, data
+						manipulation, and decision-making.
+					</p>
+				</section>
+				<section>
+					<h2>Loops and Conditions in JavaScript</h2>
+					<p>
+						Understanding the flow control with conditions and iterating with
+						loops.
+					</p>
+				</section>
+
+				<section>
+					<section>
+						<h3>Conditional Statements</h3>
+						<p>
+							JavaScript offers several ways to control the flow of your code
+							through conditional statements.
+						</p>
+					</section>
+					<section>
+						<h3>The if...else Statement</h3>
+						<p>Execute code blocks based on a condition.</p>
+						<pre><code data-trim data-noescape>
+				if (condition) {
+					// code to run if condition is true
+				} else {
+					// code to run if condition is false
+				}</code></pre>
+					</section>
+					<section>
+						<h3>Logical Expressions in Conditional Statements</h3>
+						<p>
+							Logical expressions use operators to compare values, returning
+							true or false. These expressions are crucial in making decisions
+							in code.
+						</p>
+						<pre><code data-trim data-noescape>
+				if (age >= 18 && hasLicense) {
+					console.log("Can drive");
+				} else {
+					console.log("Cannot drive");
+				}
+					</code></pre>
+					</section>
+
+					<section>
+						<h3>The switch Statement</h3>
+						<p>Choose between multiple blocks of code to be executed.</p>
+						<pre><code data-trim data-noescape>
+				switch (expression) {
+					case value1:
+						// Statements executed when the result of expression matches value1
+						break;
+					case value2:
+						// Statements executed when the result of expression matches value2
+						break;
+					default:
+						// Statements executed when none of the values match the value of the expression
+				}</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>for Loop</h3>
+						<p>Iterate over a block of code a known number of times.</p>
+						<pre><code data-trim data-noescape>
+										for (initialization; condition; finalExpression) {
+											// code to run on each iteration
+										}</code></pre>
+					</section>
+
+					<section>
+						<h3>While and Do-While Loops</h3>
+						<p>
+							Loops that execute a block of code as long as a specified
+							condition is true.
+						</p>
+						<pre><code data-trim data-noescape>
+			// While loop
+			let i = 0;
+			while (i &lt; 5) {
+				console.log(i);
+				i++;
+			}
+			
+			// Do-While loop
+			let j = 0;
+			do {
+				console.log(j);
+				j++;
+			} while (j &lt; 5);
+				</code></pre>
+					</section>
+
+					<section>
+						<h3>Avoiding Infinite Loops</h3>
+						<p>
+							Ensure loop conditions will eventually become false. Be cautious
+							with loop controls to prevent loops from running indefinitely.
+						</p>
+						<pre><code data-trim data-noescape>
+			// Correct loop condition
+			for (let i = 0; i &lt; 5; i++) {
+				console.log(i);
+			}
+			
+			// Potential infinite loop
+			while (true) {
+				// Make sure to have an exit condition
+			}
+				</code></pre>
+					</section>
+
+					<section>
+						<h3>Using Break and Continue</h3>
+						<p>
+							The <code>break</code> statement exits a loop early, and the
+							<code>continue</code> statement skips the rest of the loop
+							iteration and continues with the next one.
+						</p>
+						<pre><code data-trim data-noescape>
+			for (let i = 0; i &lt; 10; i++) {
+				if (i === 5) {
+					break; // Exit loop when i is 5
+				}
+				if (i % 2 === 0) {
+					continue; // Skip even numbers
+				}
+				console.log(i);
+			}
+				</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<h3>for...of Loop</h3>
+					<p>Iterate over iterable objects (including arrays, strings).</p>
+					<pre><code data-trim data-noescape>
+			for (const element of array) {
+				console.log(element);
+			}</code></pre>
+				</section>
+			</div>
+		</div>
+
+		<script src="../../dist/reveal.js"></script>
+		<script src="../../plugin/highlight/highlight.js"></script>
+
+		<script>
+			Reveal.initialize({
+				// center: true,
+				hash: true,
+				plugins: [RevealHighlight],
+			})
+		</script>
+	</body>
+</html>

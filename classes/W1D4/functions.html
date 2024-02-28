@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<title>Ironhack - Introduction</title>
+
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<link rel="stylesheet" href="../../dist/reveal.css" />
+		<link rel="stylesheet" href="../../dist/theme/moon.css" />
+		<link rel="stylesheet" href="../../plugin/highlight/monokai.css" />
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-image="">
+					<h3>Functions:</h3>
+					<ul>
+						<li>
+							<a href="./index.html">Conditions</a>
+						</li>
+						<li>
+							<a href="#">Functions</a>
+						</li>
+						<li>
+							<a href="./arrays.html">Arrays</a>
+						</li>
+						<li>
+							<a href="./objects.html">Objects</a>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<section>
+						<h2>Introduction to Functions</h2>
+						<p>
+							Functions are blocks of code designed to perform a particular
+							task, making code reusable, organized, and easier to read.
+						</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>Creating and Invoking Functions</h3>
+						<p>
+							Define a function with the <code>function</code> keyword, then
+							call it by name, passing arguments if necessary.
+						</p>
+						<pre><code data-trim data-noescape>
+        function sayHi(name) {
+          return `Hi ${name}!`;
+        }
+        console.log(sayHi("Samara")); // Outputs: Hi Samara!
+            </code></pre>
+					</section>
+					<section>
+						<h3>Naming Functions</h3>
+						<p>
+							Use descriptive names in camelCase for clarity and
+							maintainability.
+						</p>
+					</section>
+					<section>
+						<h3>Parameters and Arguments</h3>
+						<p>
+							Parameters are named variables in a function's declaration.
+							Arguments are the actual values passed to the function when it's
+							called.
+						</p>
+					</section>
+					<section>
+						<h3>The Return Statement</h3>
+						<p>
+							Functions can send back a value using <code>return</code>. Without
+							it, a function returns <code>undefined</code>.
+						</p>
+						<pre><code data-trim data-noescape>
+        function sum(a, b) {
+          return a + b;
+        }
+        console.log(sum(2, 3)); // Outputs: 5
+            </code></pre>
+					</section>
+					<section>
+						<h3>Displaying User Information</h3>
+						<p>Functions can accept anything as parameters</p>
+						<pre><code data-trim data-noescape>
+        function displayUserInfos(user) {
+          return `${user.name} ${user.lastName} lives in ${user.address.city}`;
+        }
+        // Example usage:
+        const user = { 
+          name: "Alice",
+          lastName: "Doe", 
+          address: {
+            city: "Paris" 
+          } 
+        }
+        const userInfo = displayUserInfos(user);
+        console.log(userInfo); // Outputs: Alice Doe lives in Paris
+            </code></pre>
+					</section>
+					<section>
+						<h3>Average Age Calculation</h3>
+						<p>
+							Use basic loops to iterate through arrays and perform
+							calculations, like averaging values.
+						</p>
+						<pre><code data-trim data-noescape>
+        function averageAgeOfStudents(students) {
+          if (!students.length) return null;
+          let sum = 0;
+          for (let i = 0; i &lt; students.length; i++) {
+            sum += students[i].age;
+          }
+          return sum / students.length;
+        }
+        // Assuming 'students' is an array of student objects with an 'age' property
+        console.log(averageAgeOfStudents(students)); // Calculates the average age
+            </code></pre>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>Using Errors for Better Debugging</h3>
+						<p>
+							Errors are not just for reporting problems; they're tools for
+							making your code more robust and easier to debug.
+						</p>
+						<pre><code data-trim data-noescape data-line-numbers="1,3,5">
+          // Throwing a custom error message
+          try {
+            throw new Error("Custom error message here");
+          } catch(error) {
+            console.error(error.message);
+          }
+            </code></pre>
+						<p>
+							Throwing errors with descriptive messages helps identify and
+							resolve issues faster.
+						</p>
+					</section>
+
+					<section>
+						<h3>Understanding Try-Catch</h3>
+						<p>
+							The try-catch statement allows you to test a block of code for
+							errors, and catch those errors to prevent them from crashing your
+							program.
+						</p>
+						<pre><code data-trim data-noescape data-line-numbers="1,4,7|">
+          try {
+            // Code to try, may cause an error
+            const result = potentiallyRiskyOperation();
+          } catch(error) {
+            // Code to run if an error occurs
+            console.error(error.message);
+          }
+            </code></pre>
+						<p>
+							Using try-catch improves your code's reliability and user
+							experience by handling errors gracefully.
+						</p>
+					</section>
+					<section>
+						<h3>Error Handling in Functions</h3>
+						<p>
+							Functions can validate input and throw errors to indicate when
+							something goes wrong.
+						</p>
+						<pre><code data-trim data-noescape>
+          function divide(a, b) {
+            if(b === 0) {
+              throw new Error("Division by zero is not allowed.");
+            }
+            return a / b;
+          }
+          
+          try {
+            console.log(divide(10, 0));
+          } catch(error) {
+            console.error(error.message); // Outputs: Division by zero is not allowed.
+          }
+            </code></pre>
+						<p>
+							This approach enhances the function's robustness and makes your
+							code more predictable and easier to debug.
+						</p>
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="../../dist/reveal.js"></script>
+		<script src="../../plugin/highlight/highlight.js"></script>
+
+		<script>
+			Reveal.initialize({
+				// center: true,
+				hash: true,
+				plugins: [RevealHighlight],
+			})
+		</script>
+	</body>
+</html>
