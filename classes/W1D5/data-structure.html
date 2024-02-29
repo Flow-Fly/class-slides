@@ -1,0 +1,77 @@
+<section>
+	<section>
+		<h2>Data Structures: Arrays and Objects</h2>
+		<p>Understanding complex data handling by combining arrays and objects.</p>
+	</section>
+	<section>
+		<h3>What is a Data Structure?</h3>
+		<p>
+			Data structures are ways to organize and store data in a computer so that
+			it can be accessed and modified efficiently.
+		</p>
+	</section>
+	<section>
+		<h3>Combining Arrays and Objects</h3>
+		<p>
+			Arrays and objects can be nested within each other to store complex and
+			structured data.
+		</p>
+	</section>
+	<section>
+		<h3>Example: Organizing Students by Age</h3>
+		<pre><code data-trim data-noescape>
+const students = [
+{ name: "Bob", age: 40 },
+{ name: "Alice", age: 40 },
+{ name: "John", age: 28 },
+{ name: "Toto", age: 26 }
+];
+
+const organizedStudents = {};
+for (const student of students) {
+if (!organizedStudents[student.age]) {
+  organizedStudents[student.age] = [student.name];
+} else {
+  organizedStudents[student.age].push(student.name);
+}
+}
+      </code></pre>
+		<p>
+			Here, students are grouped by age, demonstrating how to dynamically create
+			and access keys and values in an object.
+		</p>
+	</section>
+	<section>
+		<h3>Accessing Nested Data</h3>
+		<p>
+			Values can be accessed in nested arrays and objects using a combination of
+			dot notation and bracket notation.
+		</p>
+		<pre><code data-trim data-noescape>
+console.log(organizedStudents[40]); // Accessing array of names by age
+      </code></pre>
+	</section>
+	<section>
+		<h3>Complex Example: Organizing a Fridge</h3>
+		<pre><code data-trim data-noescape>
+const fridge = [
+{ name: "Tomatoes", category: "vegetable" },
+{ name: "Carrots", category: "vegetable" },
+{ name: "Duck", category: "meat" }
+];
+
+const organizedFridge = {};
+for (const food of fridge) {
+if (!organizedFridge[food.category]) {
+  organizedFridge[food.category] = [food.name];
+} else {
+  organizedFridge[food.category].push(food.name);
+}
+}
+      </code></pre>
+		<p>
+			This demonstrates organizing items in a fridge by category, illustrating a
+			practical application of combining arrays and objects.
+		</p>
+	</section>
+</section>

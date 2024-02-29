@@ -1,0 +1,82 @@
+<section>
+	<section>
+		<h2>Introduction to Jasmine for Testing</h2>
+		<p>
+			Learn how to write and run tests for your JavaScript code using Jasmine.
+		</p>
+	</section>
+	<section>
+		<h3>What is a Test Runner?</h3>
+		<p>
+			A test runner is a tool that executes your test suite and reports the
+			results. It automates the process of running tests to ensure your code
+			behaves as expected.
+		</p>
+	</section>
+	<section>
+		<h3>Writing Simple Tests</h3>
+		<p>
+			Before using a test runner, you can start by writing simple tests using
+			<code>console.log</code> to assert the return values of functions.
+		</p>
+		<pre><code data-trim data-noescape>
+function testSum() {
+  console.log(sum(1, 2) === 3 ? "Pass" : "Fail");
+}
+testSum();
+      </code></pre>
+	</section>
+	<section>
+		<h3>Setting Up Jasmine</h3>
+		<p>
+			To use Jasmine in the browser, include Jasmine's CSS and JavaScript files
+			in your HTML. This sets up the environment for running Jasmine tests.
+		</p>
+	</section>
+	<section>
+		<h3>Writing Unit Tests with Jasmine</h3>
+		<p>
+			Unit tests check the smallest parts of an application in isolation (e.g.,
+			functions). Using Jasmine, we can write tests to automatically check our
+			code's correctness.
+		</p>
+	</section>
+	<section>
+		<h3>Example: Testing the sum Function</h3>
+		<p>Let's write tests for a <code>sum</code> function using Jasmine.</p>
+		<pre><code data-trim data-noescape data-line-numbers>
+describe("Testing the sum function", function () {
+  it("should add numbers together", function () {
+      expect(sum(3, 5)).toBe(8);
+  });
+});
+      </code></pre>
+	</section>
+	<section>
+		<h3>Handling Errors in Tests</h3>
+		<p>
+			It's important to test not just for expected outcomes, but also how your
+			code handles errors.
+		</p>
+		<pre><code data-trim data-noescape data-line-numbers>
+it("should throw an Error if an argument is not a number", function () {
+  expect(function() { sum("chocolate", "tea"); }).toThrowError();
+});
+      </code></pre>
+	</section>
+	<section>
+		<h3>Testing Complex Functions</h3>
+		<p>
+			For more complex functions, like <code>averageAgeOfName</code>, we write
+			tests to ensure they correctly process and output data based on given
+			inputs.
+		</p>
+		<pre><code data-trim data-noescape data-line-numbers>
+describe("Test the average age of a name", function () {
+  it("should classify the names correctly", function () {
+      // Test code here
+  });
+});
+      </code></pre>
+	</section>
+</section>
