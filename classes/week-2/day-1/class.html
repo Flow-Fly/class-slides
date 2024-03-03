@@ -1,0 +1,113 @@
+<section>
+	<section>
+		<h2>Introduction to Classes in JavaScript</h2>
+		<p>
+			Learn how to use classes to encapsulate and organize your code
+			effectively.
+		</p>
+	</section>
+	<section>
+		<h3>What is a Class?</h3>
+		<p>
+			A class is a blueprint for creating objects with predefined properties and
+			methods.
+		</p>
+		<pre><code data-trim data-noescape data-line-numbers>
+class Book {
+  constructor(author, title, pages) {
+      this.author = author;
+      this.title = title;
+      this.pages = pages;
+  }
+  read(pages) {
+      console.log(`Reading ${pages} pages of ${this.title}`);
+  }
+}
+      </code></pre>
+	</section>
+	<section>
+		<h3>Understanding the Constructor and 'new'</h3>
+		<p>
+			The constructor method is a special method for creating and initializing
+			objects. The 'new' keyword creates an instance of a class.
+		</p>
+		<pre><code data-trim data-noescape data-line-numbers>
+const myBook = new Book('JK Rowling', 'Harry Potter', 500);
+myBook.read(50);
+      </code></pre>
+	</section>
+	<section>
+		<h3>Inheritance</h3>
+		<p>
+			Inheritance allows a class to inherit properties and methods from another
+			class.
+		</p>
+		<pre><code data-trim data-noescape data-line-numbers>
+class Novel extends Book {
+  constructor(author, title, pages, genre) {
+      super(author, title, pages);
+      this.genre = genre;
+  }
+}
+      </code></pre>
+	</section>
+	<section>
+		<h3>Abstraction</h3>
+		<p>
+			Abstraction means hiding the complex reality while exposing only the
+			necessary parts.
+		</p>
+		<pre><code data-trim data-noescape data-line-numbers>
+class Library {
+  constructor() {
+      this.books = [];
+  }
+  addBook(book) {
+      this.books.push(book);
+  }
+}
+      </code></pre>
+	</section>
+	<section>
+		<h3>Polymorphism</h3>
+		<p>
+			Polymorphism allows objects of different classes to be treated as objects
+			of a common super class.
+		</p>
+		<pre><code data-trim data-noescape data-line-numbers>
+const book = new Book('Author', 'Title', 100);
+const novel = new Novel('Author', 'Novel Title', 200, 'Fantasy');
+const library = new Library();
+library.addBook(book);
+library.addBook(novel);
+      </code></pre>
+	</section>
+	<section>
+		<h3>Encapsulation</h3>
+		<p>
+			Encapsulation is the bundling of data and the methods that operate on that
+			data.
+		</p>
+		<pre><code data-trim data-noescape data-line-numbers>
+class EncapsulatedBook {
+  #pagesRead = 0;
+  constructor(title, pages) {
+      this.title = title;
+      this.totalPages = pages;
+  }
+  read(pages) {
+      this.#pagesRead += pages;
+  }
+}
+      </code></pre>
+	</section>
+	<section>
+		<h2>Summary</h2>
+		<p>
+			Classes in JavaScript provide a powerful way to encapsulate data and
+			functionality. By understanding and applying principles like inheritance,
+			abstraction, polymorphism, and encapsulation, you can design robust and
+			maintainable code.
+		</p>
+	</section>
+</section>

@@ -1,0 +1,66 @@
+<section>
+	<h2>Higher Order Functions</h2>
+	<p>
+		Functions that take other functions as arguments or return them. Commonly
+		used with array methods like forEach, map, filter, and reduce.
+	</p>
+</section>
+
+<section>
+	<h3>forEach</h3>
+	<p>Executes a provided function once for each array element.</p>
+	<pre><code data-trim data-noescape>
+myArray.forEach(function(element) {
+console.log(element);
+});
+  </code></pre>
+</section>
+
+<section>
+	<h3>map</h3>
+	<p>
+		Creates a new array populated with the results of calling a provided
+		function on every element in the calling array.
+	</p>
+	<pre><code data-trim data-noescape>
+const doubled = myArray.map(num => num * 2);
+  </code></pre>
+</section>
+
+<section>
+	<h3>filter</h3>
+	<p>
+		Creates a new array with all elements that pass the test implemented by the
+		provided function.
+	</p>
+	<pre><code data-trim data-noescape>
+const filtered = myArray.filter(num => num > 3);
+  </code></pre>
+</section>
+
+<section>
+	<h3>reduce</h3>
+	<p>
+		Executes a reducer function on each element of the array, resulting in a
+		single output value.
+	</p>
+	<pre><code data-trim data-noescape>
+const total = myArray.reduce((acc, val) => acc + val, 0);
+  </code></pre>
+</section>
+
+<section>
+	<h3>sort</h3>
+	<p>Sorts the elements of an array in place and returns the sorted array.</p>
+	<pre><code data-trim data-noescape>
+myArray.sort((a, b) => a - b);
+  </code></pre>
+</section>
+
+<section>
+	<h3>Advanced Sorting</h3>
+	<p>Using localeCompare for sorting strings.</p>
+	<pre><code data-trim data-noescape>
+wizards.sort((a, b) => a.lastName.localeCompare(b.lastName));
+  </code></pre>
+</section>

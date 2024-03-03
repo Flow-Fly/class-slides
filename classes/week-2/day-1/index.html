@@ -1,0 +1,77 @@
+<section>
+	<section>
+		<h2>Introduction to Object-Oriented Programming</h2>
+		<p>
+			Discover how to structure your JavaScript code using the principles of
+			Object-Oriented Programming.
+		</p>
+	</section>
+	<section>
+		<h3>What is Object-Oriented Programming?</h3>
+		<p>
+			Object-Oriented Programming (OOP) is a programming paradigm based on the
+			concept of "objects", which can contain data and code: data in the form of
+			fields, and code, in the form of procedures.
+		</p>
+	</section>
+	<section>
+		<h3>Thinking in Objects</h3>
+		<p>
+			Thinking in objects means modeling your software based on real-world
+			entities and their interactions. This approach makes your code more
+			modular, reusable, and understandable.
+		</p>
+	</section>
+	<section>
+		<h3>Creating Objects: Literal Pattern</h3>
+		<p>
+			You can create objects directly in JavaScript using the object literal
+			syntax. This is a simple way to define an object and its properties.
+		</p>
+		<pre><code data-trim data-noescape data-line-numbers>
+const car = {
+  make: "Toyota",
+  model: "Camry",
+  year: 2020
+};
+      </code></pre>
+	</section>
+	<section>
+		<h3>Accessing Object Properties</h3>
+		<p>
+			Object properties can be accessed using dot notation or bracket notation.
+			This allows you to read or modify the properties of an object.
+		</p>
+		<pre><code data-trim data-noescape data-line-numbers>
+console.log(car.make); // Toyota
+console.log(car["model"]); // Camry
+      </code></pre>
+	</section>
+	<section>
+		<h3>Understanding the 'this' Keyword</h3>
+		<p>
+			The <code>this</code> keyword in JavaScript refers to the object it
+			belongs to. It allows you to access properties and methods of the object
+			from within its methods.
+		</p>
+		<pre><code data-trim data-noescape data-line-numbers>
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  fullName: function() {
+      return this.firstName + " " + this.lastName;
+  }
+};
+console.log(person.fullName()); // John Doe
+      </code></pre>
+	</section>
+	<section>
+		<h2>Summary</h2>
+		<p>
+			Object-Oriented Programming helps organize and structure your JavaScript
+			code. By thinking in terms of objects, creating objects using literals,
+			accessing their properties, and utilizing the <code>this</code> keyword,
+			you can make your code more modular and reusable.
+		</p>
+	</section>
+</section>
