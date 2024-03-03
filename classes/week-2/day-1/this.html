@@ -1,90 +1,131 @@
-<section>
-	<section>
-		<h2>Understanding the 'this' Keyword</h2>
-		<p>
-			Learn how 'this' behaves in different contexts to write more effective
-			JavaScript.
-		</p>
-	</section>
-	<section>
-		<h3>Global Context</h3>
-		<p>
-			In the global context, 'this' refers to the global object. In a browser,
-			it's 'window'.
-		</p>
-		<pre><code data-trim data-noescape data-line-numbers>
-console.log(this === window); // true
-var color = 'blue';
-console.log(window.color); // 'blue'
-      </code></pre>
-	</section>
-	<section>
-		<h3>Function Context</h3>
-		<p>
-			Inside a function, the value of 'this' depends on how the function is
-			called.
-		</p>
-		<pre><code data-trim data-noescape data-line-numbers>
-function showColor() {
-console.log(this.color);
-}
-var color = 'green';
-window.showColor(); // 'green'
-      </code></pre>
-	</section>
-	<section>
-		<h3>Object Methods</h3>
-		<p>
-			In object methods, 'this' refers to the object that is calling the method.
-		</p>
-		<pre><code data-trim data-noescape data-line-numbers>
-const shirt = {
-color: 'blue',
-showColor: function() {
-  console.log(this.color);
-}
-};
-shirt.showColor(); // 'blue'
-      </code></pre>
-	</section>
-	<section>
-		<h3>Class Context</h3>
-		<p>In classes, 'this' refers to the instance of the class.</p>
-		<pre><code data-trim data-noescape data-line-numbers>
-class Shirt {
-constructor(color) {
-  this.color = color;
-}
-showColor() {
-  console.log(this.color);
-}
-}
-const myShirt = new Shirt('red');
-myShirt.showColor(); // 'red'
-      </code></pre>
-	</section>
-	<section>
-		<h3>Arrow Functions</h3>
-		<p>
-			Arrow functions do not have their own 'this'. They inherit 'this' from the
-			parent scope.
-		</p>
-		<pre><code data-trim data-noescape data-line-numbers>
-const pants = {
-color: 'black',
-showColor: () => {
-  console.log(this.color); // undefined or global color if defined
-}
-};
-pants.showColor();
-      </code></pre>
-	</section>
-	<section>
-		<h2>Summary</h2>
-		<p>
-			Understanding the behavior of 'this' in various contexts is key to
-			mastering JavaScript. Remember, its value can change based on where and
-			how it's called.
-		</p>
-	</section>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<title>Ironhack - Introduction</title>
+
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<link rel="stylesheet" href="../../../dist/reveal.css" />
+		<link rel="stylesheet" href="../../../dist/theme/moon.css" />
+		<link rel="stylesheet" href="../../../plugin/highlight/monokai.css" />
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-image="">
+					<h3>OOP and Classes:</h3>
+					<ul>
+						<li>
+							<a href="./index.html">OOP</a>
+						</li>
+						<li>
+							<a href="./class.html">Class</a>
+						</li>
+						<li>
+							<a href="#">The infamous <code>this</code></a>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<section>
+						<h2>Understanding the 'this' Keyword</h2>
+						<p>
+							Learn how 'this' behaves in different contexts to write more
+							effective JavaScript.
+						</p>
+					</section>
+					<section>
+						<h3>Global Context</h3>
+						<p>
+							In the global context, 'this' refers to the global object. In a
+							browser, it's 'window'.
+						</p>
+						<pre><code data-trim data-noescape data-line-numbers>
+				console.log(this === window); // true
+				const color = 'blue';
+				console.log(window.color); // 'blue'
+							</code></pre>
+					</section>
+					<section>
+						<h3>Function Context</h3>
+						<p>
+							Inside a function, the value of 'this' depends on how the function
+							is called.
+						</p>
+						<pre><code data-trim data-noescape data-line-numbers>
+				function showColor() {
+				console.log(this.color);
+				}
+				const color = 'green';
+				window.showColor(); // 'green'
+							</code></pre>
+					</section>
+					<section>
+						<h3>Object Methods</h3>
+						<p>
+							In object methods, 'this' refers to the object that is calling the
+							method.
+						</p>
+						<pre><code data-trim data-noescape data-line-numbers>
+				const shirt = {
+				color: 'blue',
+				showColor: function() {
+					console.log(this.color);
+				}
+				};
+				shirt.showColor(); // 'blue'
+							</code></pre>
+					</section>
+					<section>
+						<h3>Class Context</h3>
+						<p>In classes, 'this' refers to the instance of the class.</p>
+						<pre><code data-trim data-noescape data-line-numbers>
+				class Shirt {
+				constructor(color) {
+					this.color = color;
+				}
+				showColor() {
+					console.log(this.color);
+				}
+				}
+				const myShirt = new Shirt('red');
+				myShirt.showColor(); // 'red'
+							</code></pre>
+					</section>
+					<section>
+						<h3>Arrow Functions</h3>
+						<p>
+							Arrow functions do not have their own 'this'. They inherit 'this'
+							from the parent scope.
+						</p>
+						<pre><code data-trim data-noescape data-line-numbers>
+				const pants = {
+				color: 'black',
+				showColor: () => {
+					console.log(this.color); // undefined or global color if defined
+				}
+				};
+				pants.showColor();
+							</code></pre>
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="../../../dist/reveal.js"></script>
+		<script src="../../../plugin/highlight/highlight.js"></script>
+
+		<script>
+			Reveal.initialize({
+				// center: true,
+				hash: true,
+				plugins: [RevealHighlight],
+			})
+		</script>
+	</body>
+</html>
