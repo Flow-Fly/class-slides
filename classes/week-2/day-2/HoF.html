@@ -1,66 +1,116 @@
-<section>
-	<h2>Higher Order Functions</h2>
-	<p>
-		Functions that take other functions as arguments or return them. Commonly
-		used with array methods like forEach, map, filter, and reduce.
-	</p>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
 
-<section>
-	<h3>forEach</h3>
-	<p>Executes a provided function once for each array element.</p>
-	<pre><code data-trim data-noescape>
-myArray.forEach(function(element) {
-console.log(element);
-});
-  </code></pre>
-</section>
+		<title>Ironhack - Introduction</title>
 
-<section>
-	<h3>map</h3>
-	<p>
-		Creates a new array populated with the results of calling a provided
-		function on every element in the calling array.
-	</p>
-	<pre><code data-trim data-noescape>
-const doubled = myArray.map(num => num * 2);
-  </code></pre>
-</section>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-<section>
-	<h3>filter</h3>
-	<p>
-		Creates a new array with all elements that pass the test implemented by the
-		provided function.
-	</p>
-	<pre><code data-trim data-noescape>
-const filtered = myArray.filter(num => num > 3);
-  </code></pre>
-</section>
+		<link rel="stylesheet" href="../../../dist/reveal.css" />
+		<link rel="stylesheet" href="../../../dist/theme/moon.css" />
+		<link rel="stylesheet" href="../../../plugin/highlight/monokai.css" />
+	</head>
 
-<section>
-	<h3>reduce</h3>
-	<p>
-		Executes a reducer function on each element of the array, resulting in a
-		single output value.
-	</p>
-	<pre><code data-trim data-noescape>
-const total = myArray.reduce((acc, val) => acc + val, 0);
-  </code></pre>
-</section>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-image="">
+					<h3>Functions and HoF:</h3>
+					<ul>
+						<li>
+							<a href="./index.html">Advanced functions</a>
+						</li>
+						<li>
+							<a href="#">Higher Order Functions</a>
+						</li>
+					</ul>
+				</section>
 
-<section>
-	<h3>sort</h3>
-	<p>Sorts the elements of an array in place and returns the sorted array.</p>
-	<pre><code data-trim data-noescape>
-myArray.sort((a, b) => a - b);
-  </code></pre>
-</section>
+				<section>
+					<h2>Higher Order Functions</h2>
+					<p>
+						Functions that take other functions as arguments or return them.
+						Commonly used with array methods like forEach, map, filter, and
+						reduce.
+					</p>
+				</section>
 
-<section>
-	<h3>Advanced Sorting</h3>
-	<p>Using localeCompare for sorting strings.</p>
-	<pre><code data-trim data-noescape>
-wizards.sort((a, b) => a.lastName.localeCompare(b.lastName));
-  </code></pre>
-</section>
+				<section>
+					<h3>forEach</h3>
+					<p>Executes a provided function once for each array element.</p>
+					<pre><code data-trim data-noescape>
+				myArray.forEach(function(element) {
+				console.log(element);
+				});
+					</code></pre>
+				</section>
+
+				<section>
+					<h3>map</h3>
+					<p>
+						Creates a new array populated with the results of calling a provided
+						function on every element in the calling array.
+					</p>
+					<pre><code data-trim data-noescape>
+				const doubled = myArray.map(num => num * 2);
+					</code></pre>
+				</section>
+
+				<section>
+					<h3>filter</h3>
+					<p>
+						Creates a new array with all elements that pass the test implemented
+						by the provided function.
+					</p>
+					<pre><code data-trim data-noescape>
+				const filtered = myArray.filter(num => num > 3);
+					</code></pre>
+				</section>
+
+				<section>
+					<h3>reduce</h3>
+					<p>
+						Executes a reducer function on each element of the array, resulting
+						in a single output value.
+					</p>
+					<pre><code data-trim data-noescape>
+				const total = myArray.reduce((acc, val) => acc + val, 0);
+					</code></pre>
+				</section>
+
+				<section>
+					<h3>sort</h3>
+					<p>
+						Sorts the elements of an array in place and returns the sorted
+						array.
+					</p>
+					<pre><code data-trim data-noescape>
+				myArray.sort((a, b) => a - b);
+					</code></pre>
+				</section>
+
+				<section>
+					<h3>Advanced Sorting</h3>
+					<p>Using localeCompare for sorting strings.</p>
+					<pre><code data-trim data-noescape>
+				wizards.sort((a, b) => a.lastName.localeCompare(b.lastName));
+					</code></pre>
+				</section>
+			</div>
+		</div>
+
+		<script src="../../../dist/reveal.js"></script>
+		<script src="../../../plugin/highlight/highlight.js"></script>
+
+		<script>
+			Reveal.initialize({
+				// center: true,
+				hash: true,
+				plugins: [RevealHighlight],
+			})
+		</script>
+	</body>
+</html>

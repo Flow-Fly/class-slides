@@ -1,82 +1,128 @@
-<section>
-	<section>
-		<h2>Advanced Function Concepts</h2>
-		<p>
-			Deep dive into function expressions, arrow functions, passing functions,
-			anonymous functions, and the arguments object.
-		</p>
-	</section>
-	<section>
-		<h3>Function Expression</h3>
-		<p>A function expression assigns an anonymous function to a variable.</p>
-		<pre><code data-trim data-noescape data-line-numbers>
-const mySayHiFunction = function(name) {
-return \`Hi \${name}\`;
-};
-      </code></pre>
-	</section>
-	<section>
-		<h3>Arrow Function Syntax</h3>
-		<p>Arrow functions provide a concise syntax for writing functions.</p>
-		<pre><code data-trim data-noescape data-line-numbers>
-const sum = (a, b) => a + b;
-      </code></pre>
-	</section>
-	<section>
-		<h3>Passing Functions as Arguments</h3>
-		<p>Functions can be passed as arguments to other functions.</p>
-		<pre><code data-trim data-noescape data-line-numbers>
-function morningRoutine(task) {
-task();
-}
-morningRoutine(() => console.log('Making coffee'));
-      </code></pre>
-	</section>
-	<section>
-		<h3>Using Anonymous Functions</h3>
-		<p>
-			Anonymous functions are functions without a name, often used as arguments.
-		</p>
-		<pre><code data-trim data-noescape data-line-numbers>
-setTimeout(function() {
-console.log('Reminder: Take a break!');
-}, 1000);
-      </code></pre>
-	</section>
-	<section>
-		<h3>The Arguments Object</h3>
-		<p>
-			Inside a function, 'arguments' is an array-like object containing all
-			passed arguments.
-		</p>
-		<pre><code data-trim data-noescape data-line-numbers>
-function showArgs() {
-return Array.from(arguments).join(', ');
-}
-console.log(showArgs(1, 'blue', true));
-      </code></pre>
-	</section>
-	<section>
-		<h3>Rest Parameters</h3>
-		<p>
-			Rest parameters allow a function to accept an indefinite number of
-			arguments as an array.
-		</p>
-		<pre><code data-trim data-noescape data-line-numbers>
-const sumAll = (...nums) => {
-  let sum = 0
-  for (const elem of nums) {
-    sum += elem
-  }
-  return sum
-}
-      </code></pre>
-	</section>
-	<section>
-		<h2>Summary</h2>
-		<p>
-			Mastering these advanced function concepts enhances your ability to write
-			flexible and powerful JavaScript code.
-		</p>
-	</section>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<title>Ironhack - Introduction</title>
+
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<link rel="stylesheet" href="../../../dist/reveal.css" />
+		<link rel="stylesheet" href="../../../dist/theme/moon.css" />
+		<link rel="stylesheet" href="../../../plugin/highlight/monokai.css" />
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-image="">
+					<h3>Functions and HoF:</h3>
+					<ul>
+						<li>
+							<a href="#">Advanced functions</a>
+						</li>
+						<li>
+							<a href="./HoF.html">Higher Order Functions</a>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Advanced Function Concepts</h2>
+					<p>
+						Deep dive into function expressions, arrow functions, passing
+						functions, anonymous functions, and the arguments object.
+					</p>
+				</section>
+				<section>
+					<h3>Function Expression</h3>
+					<p>
+						A function expression assigns an anonymous function to a variable.
+					</p>
+					<pre><code data-trim data-noescape data-line-numbers>
+			const mySayHiFunction = function(name) {
+			return \`Hi \${name}\`;
+			};
+						</code></pre>
+				</section>
+				<section>
+					<h3>Arrow Function Syntax</h3>
+					<p>Arrow functions provide a concise syntax for writing functions.</p>
+					<pre><code data-trim data-noescape data-line-numbers>
+			const sum = (a, b) => a + b;
+						</code></pre>
+				</section>
+				<section>
+					<h3>Passing Functions as Arguments</h3>
+					<p>Functions can be passed as arguments to other functions.</p>
+					<pre><code data-trim data-noescape data-line-numbers>
+			function morningRoutine(task) {
+			task();
+			}
+			morningRoutine(() => console.log('Making coffee'));
+						</code></pre>
+				</section>
+				<section>
+					<h3>Using Anonymous Functions</h3>
+					<p>
+						Anonymous functions are functions without a name, often used as
+						arguments.
+					</p>
+					<pre><code data-trim data-noescape data-line-numbers>
+			setTimeout(function() {
+			console.log('Reminder: Take a break!');
+			}, 1000);
+						</code></pre>
+				</section>
+				<section>
+					<h3>The Arguments Object</h3>
+					<p>
+						Inside a function, 'arguments' is an array-like object containing
+						all passed arguments.
+					</p>
+					<pre><code data-trim data-noescape data-line-numbers>
+			function showArgs() {
+			return Array.from(arguments).join(', ');
+			}
+			console.log(showArgs(1, 'blue', true));
+						</code></pre>
+				</section>
+				<section>
+					<h3>Rest Parameters</h3>
+					<p>
+						Rest parameters allow a function to accept an indefinite number of
+						arguments as an array.
+					</p>
+					<pre><code data-trim data-noescape data-line-numbers>
+			const sumAll = (...nums) => {
+				let sum = 0
+				for (const elem of nums) {
+					sum += elem
+				}
+				return sum
+			}
+						</code></pre>
+				</section>
+				<section>
+					<h2>Summary</h2>
+					<p>
+						Mastering these advanced function concepts enhances your ability to
+						write flexible and powerful JavaScript code.
+					</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="../../../dist/reveal.js"></script>
+		<script src="../../../plugin/highlight/highlight.js"></script>
+
+		<script>
+			Reveal.initialize({
+				// center: true,
+				hash: true,
+				plugins: [RevealHighlight],
+			})
+		</script>
+	</body>
+</html>
