@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<title>Ironhack - Introduction</title>
+
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<link rel="stylesheet" href="../../../dist/reveal.css" />
+		<link rel="stylesheet" href="../../../dist/theme/moon.css" />
+		<link rel="stylesheet" href="../../../plugin/highlight/monokai.css" />
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-image="">
+					<h3>DOM:</h3>
+					<ul>
+						<li>
+							<a href="#">DOM Generalities</a>
+						</li>
+						<li>
+							<a href="./events.html">Dom Event</a>
+						</li>
+						<li>
+							<a href="./inputs.html">Inputs</a>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Introduction to the DOM</h2>
+					<p>
+						The Document Object Model (DOM) is a programming interface for web
+						documents. It represents the page so that programs can change the
+						document structure, style, and content.
+					</p>
+				</section>
+
+				<section>
+					<h3>DOM Tree Representation</h3>
+					<p>
+						The DOM is represented as a tree of nodes, including elements,
+						attributes, and text. These nodes can be manipulated with
+						JavaScript.
+					</p>
+				</section>
+
+				<section>
+					<h3>Selecting Elements</h3>
+					<p>
+						Elements can be selected using
+						<code>document.getElementById()</code>,
+						<code>querySelector()</code>, and <code>querySelectorAll()</code>.
+					</p>
+				</section>
+				<section>
+					<h3>Selecting Elements</h3>
+					<pre><code data-trim data-noescape>
+        console.log(document.getElementById("main-title"))
+        const title = document.getElementById("main-title")
+        console.log(title.textContent)
+          </code></pre>
+					<p>
+						Using <code>getElementById</code> to select an element and log its
+						text content.
+					</p>
+				</section>
+
+				<section>
+					<h3>Modifying Text Content</h3>
+					<pre><code data-trim data-noescape>
+        setTimeout(() => {
+          title.textContent = "Welcome to DOM world, html"
+        }, 2000)
+          </code></pre>
+					<p>Modifying the text content of a selected element with a delay.</p>
+				</section>
+
+				<section>
+					<h3>Creating and Modifying HTML Content</h3>
+					<pre><code data-trim data-noescape>
+        const listOfStudents = document.querySelector(".student-list")
+        listOfStudents.innerHTML += `<li style="color: dodgerblue">John</li>`
+          </code></pre>
+					<p>
+						Adding a new list item to an unordered list using
+						<code>innerHTML</code>.
+					</p>
+				</section>
+
+				<section>
+					<h3>Appending Elements Dynamically</h3>
+					<pre><code data-trim data-noescape>
+        students.forEach((student) => {
+          const card = document.createElement("div")
+          card.classList.add("card")
+          const title = document.createElement("h3")
+          const paragraph = document.createElement("p")
+          title.textContent = student.name
+          paragraph.textContent = student.content
+          card.append(title, paragraph)
+          studentSection.append(card)
+        })
+          </code></pre>
+					<p>Dynamically creating and appending new elements to the DOM.</p>
+				</section>
+
+				<section>
+					<h3>Query Selectors</h3>
+					<pre><code data-trim data-noescape>
+        const allTheBobs = document.querySelectorAll(".card:nth-of-type(even) > h3")
+        allTheBobs.forEach((name) => {
+          name.classList.add("special")
+        })
+          </code></pre>
+					<p>
+						Selecting and modifying elements using CSS selectors and
+						<code>querySelectorAll</code>.
+					</p>
+				</section>
+
+				<section>
+					<h3>Attributes and Data-* Attributes</h3>
+					<pre><code data-trim data-noescape>
+        title.setAttribute("custom-attribute", "custom value")
+        console.log(studentWithAttribute.dataset)
+          </code></pre>
+					<p>
+						Setting custom attributes and accessing
+						<code>data-*</code> attributes.
+					</p>
+				</section>
+
+				<section>
+					<h3>Event Handling</h3>
+					<p>
+						Assign events to elements using <code>addEventListener</code>. For
+						instance,
+						<code>element.addEventListener('click', functionName);</code>
+					</p>
+					<pre><code data-trim data-noescape>
+        element.addEventListener("click", function() {
+        alert("Element clicked!");
+        });
+          </code></pre>
+				</section>
+			</div>
+		</div>
+
+		<script src="../../../dist/reveal.js"></script>
+		<script src="../../../plugin/highlight/highlight.js"></script>
+
+		<script>
+			Reveal.initialize({
+				// center: true,
+				hash: true,
+				plugins: [RevealHighlight],
+			})
+		</script>
+	</body>
+</html>

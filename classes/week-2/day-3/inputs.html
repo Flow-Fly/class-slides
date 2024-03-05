@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<title>Ironhack - Introduction</title>
+
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<link rel="stylesheet" href="../../../dist/reveal.css" />
+		<link rel="stylesheet" href="../../../dist/theme/moon.css" />
+		<link rel="stylesheet" href="../../../plugin/highlight/monokai.css" />
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-image="">
+					<h3>DOM:</h3>
+					<ul>
+						<li>
+							<a href="./index.html">DOM Generalities</a>
+						</li>
+						<li>
+							<a href="./events.html">Dom Event</a>
+						</li>
+						<li>
+							<a href="#">Inputs</a>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Handling Input Fields</h3>
+					<p>Create a grocery list item based on user input.</p>
+					<pre><code data-trim data-noescape>
+        button.addEventListener("click", () => {
+          if (inputElement.value === "" ||
+              quantityElement.value === "" ||
+              quantityElement.value === "0") {
+            alert("Wrong inputs")
+            return
+          }
+          const li = document.createElement("li")
+          li.textContent = \`\${inputElement.value}: \${quantityElement.value}\`
+          list.append(li)
+        })
+          </code></pre>
+				</section>
+
+				<section>
+					<h3>Removing Items on Click</h3>
+					<p>Click on a grocery list item to remove it.</p>
+					<pre><code data-trim data-noescape>
+        li.addEventListener("click", () => {
+          li.remove()
+        })
+          </code></pre>
+				</section>
+
+				<section>
+					<h3>Listening to Input Changes</h3>
+					<p>
+						Update the title based on what is being typed in the input field.
+					</p>
+					<pre><code data-trim data-noescape>
+        inputElement.addEventListener("input", (event) => {
+          title.textContent = event.target.value
+        })
+          </code></pre>
+				</section>
+			</div>
+		</div>
+
+		<script src="../../../dist/reveal.js"></script>
+		<script src="../../../plugin/highlight/highlight.js"></script>
+
+		<script>
+			Reveal.initialize({
+				// center: true,
+				hash: true,
+				plugins: [RevealHighlight],
+			})
+		</script>
+	</body>
+</html>

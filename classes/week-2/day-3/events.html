@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<title>Ironhack - Introduction</title>
+
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<link rel="stylesheet" href="../../../dist/reveal.css" />
+		<link rel="stylesheet" href="../../../dist/theme/moon.css" />
+		<link rel="stylesheet" href="../../../plugin/highlight/monokai.css" />
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-image="">
+					<h3>DOM:</h3>
+					<ul>
+						<li>
+							<a href="./index.html">DOM Generalities</a>
+						</li>
+						<li>
+							<a href="#">Dom Event</a>
+						</li>
+						<li>
+							<a href="./inputs.html">Inputs</a>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Adding Event Listeners</h3>
+					<p>Add an event listener to a button to create circles.</p>
+					<pre><code data-trim data-noescape>
+        buttonElement.addEventListener("click", (event) => {
+          const circle = document.createElement("div")
+          circle.classList.add("circle")
+          circle.style.background = getRandomColor()
+          sectionElement.append(circle)
+        })
+          </code></pre>
+				</section>
+
+				<section>
+					<h3>Event Object</h3>
+					<p>Logging the event object to explore its properties.</p>
+					<pre><code data-trim data-noescape>
+        buttonElement.addEventListener("click", (event) => {
+          console.log(event)
+        })
+          </code></pre>
+				</section>
+
+				<section>
+					<h3>Dynamic Element Interaction</h3>
+					<p>Change circle color on mouse enter and remove it on click.</p>
+					<pre><code data-trim data-noescape>
+        circle.addEventListener("mouseenter", () => {
+          circle.style.background = getRandomColor()
+        })
+        circle.addEventListener("click", () => {
+          circle.remove()
+        })
+          </code></pre>
+				</section>
+
+				<section>
+					<h3>Resetting the DOM</h3>
+					<p>Remove all circles from the section on button click.</p>
+					<pre><code data-trim data-noescape>
+        resetButton.addEventListener("click", removeCircles)
+        function removeCircles(event) {
+          sectionElement.innerHTML = ""
+        }
+          </code></pre>
+				</section>
+
+				<section>
+					<h3>Styling Multiple Elements</h3>
+					<p>Apply random background color to all article elements.</p>
+					<pre><code data-trim data-noescape>
+        allArticles.forEach((article) => {
+          article.style.background = getRandomColor()
+        })
+          </code></pre>
+				</section>
+
+				<section>
+					<h3>Creating Random Colors</h3>
+					<p>Function to generate a random HSL color value.</p>
+					<pre><code data-trim data-noescape>
+        function getRandomColor() {
+          return `hsl(${Math.random() * 360}, 80%, 60%)`
+        }
+          </code></pre>
+				</section>
+			</div>
+		</div>
+
+		<script src="../../../dist/reveal.js"></script>
+		<script src="../../../plugin/highlight/highlight.js"></script>
+
+		<script>
+			Reveal.initialize({
+				// center: true,
+				hash: true,
+				plugins: [RevealHighlight],
+			})
+		</script>
+	</body>
+</html>
