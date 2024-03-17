@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<title>Ironhack - Introduction</title>
+
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<link rel="stylesheet" href="../../../dist/reveal.css" />
+		<link rel="stylesheet" href="../../../dist/theme/moon.css" />
+		<link rel="stylesheet" href="../../../plugin/highlight/monokai.css" />
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-image="">
+					<h3>Node/npm and React:</h3>
+					<ul>
+						<li>
+							<a href="#">Node / npm</a>
+						</li>
+						<li>
+							<a href="./react-intro.html">React - Intro</a>
+						</li>
+						<li>
+							<a href="./components-props.html">React - Components & Props</a>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Introduction to Node.js</h2>
+					<p>
+						Node.js is a JavaScript runtime built on Chrome's V8 JavaScript
+						engine. It allows you to run JavaScript on the server.
+					</p>
+				</section>
+
+				<section>
+					<h3>History of Node.js</h3>
+					<p>
+						Created by Ryan Dahl in 2009, Node.js was developed to address the
+						problem of high concurrency with low overhead.
+					</p>
+				</section>
+
+				<section>
+					<h3>Why Use Node.js?</h3>
+					<ul>
+						<li>Enables JavaScript to be used for server-side scripting.</li>
+						<li>
+							Non-blocking, event-driven architecture suitable for I/O heavy
+							operations.
+						</li>
+						<li>Large ecosystem of open-source libraries available via npm.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Node Package Manager (npm)</h2>
+					<p>
+						npm is the world's largest Software Registry. It is also a software
+						Package Manager and installer for Node.js.
+					</p>
+				</section>
+
+				<section>
+					<h3>Why Use npm?</h3>
+					<ul>
+						<li>Manage project dependencies.</li>
+						<li>Share packages with other developers.</li>
+						<li>Discover reusable code for your projects.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Using Node.js and npm</h3>
+					<p>
+						First, install Node.js from the official website. This will also
+						install npm.
+					</p>
+					<pre><code data-trim data-noescape>
+        // Verify Node.js installation
+        node -v
+        
+        // Verify npm installation
+        npm -v
+          </code></pre>
+				</section>
+
+				<section>
+					<h3>npm Packages</h3>
+					<p>Use npm to install packages needed for your project.</p>
+					<pre><code data-trim data-noescape>
+        // Install a package locally
+        npm install &lt;package-name&gt;
+        
+        // Install a package globally
+        npm install -g &lt;package-name&gt;
+          </code></pre>
+				</section>
+
+				<section>
+					<h3>Understanding package.json</h3>
+					<p>
+						The package.json file is a manifest for your project. It contains
+						metadata about the project and lists its dependencies.
+					</p>
+				</section>
+
+				<section>
+					<h3>node_modules and package-lock.json</h3>
+					<ul>
+						<li>
+							<code>node_modules</code>: Directory where npm packages are
+							stored.
+						</li>
+						<li>
+							<code>package-lock.json</code>: Automatically generated file;
+							locks down the versions of installed packages to ensure
+							consistency.
+						</li>
+					</ul>
+				</section>
+			</div>
+		</div>
+
+		<script src="../../../dist/reveal.js"></script>
+		<script src="../../../plugin/highlight/highlight.js"></script>
+
+		<script>
+			Reveal.initialize({
+				// center: true,
+				hash: true,
+				plugins: [RevealHighlight],
+			})
+		</script>
+	</body>
+</html>

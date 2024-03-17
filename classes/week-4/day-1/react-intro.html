@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<title>Ironhack - Introduction</title>
+
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<link rel="stylesheet" href="../../../dist/reveal.css" />
+		<link rel="stylesheet" href="../../../dist/theme/moon.css" />
+		<link rel="stylesheet" href="../../../plugin/highlight/monokai.css" />
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-image="">
+					<h3>Node/npm and React:</h3>
+					<ul>
+						<li>
+							<a href="./index.html">Node / npm</a>
+						</li>
+						<li>
+							<a href="#">React - Intro</a>
+						</li>
+						<li>
+							<a href="./components-props.html">React - Components & Props</a>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>JavaScript Frameworks and Libraries</h2>
+					<ul>
+						<li>
+							Framework:
+							<span class="fragment"
+								>provides a structure and set of guidelines to build your
+								project</span
+							>
+						</li>
+
+						<li>
+							Library:
+							<span class="fragment"
+								>provides reusable code to help solve common problems.</span
+							>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Why Use Them?</h3>
+					<ul>
+						<li>Speed up development process.</li>
+						<li>Provide well-tested solutions to common problems.</li>
+						<li>Improve code quality and maintainability.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>What is React?</h3>
+					<p>
+						React is a declarative, efficient, and flexible JavaScript library
+						for building user interfaces. It lets you compose complex UIs from
+						small and isolated pieces of code called "components".
+					</p>
+				</section>
+
+				<section>
+					<h3>Main Features of React</h3>
+					<ul>
+						<li>
+							<strong>Declarative:</strong>
+							<span class="fragment">
+								Design simple views for each state in your application, and
+								React will efficiently update and render just the right
+								components when your data changes.
+							</span>
+						</li>
+						<li>
+							<strong>Component-Based:</strong>
+							<span class="fragment">
+								Build encapsulated components that manage their own state, then
+								compose them to make complex UIs.
+							</span>
+						</li>
+						<li>
+							<strong>Learn Once, Write Anywhere:</strong>
+							<span class="fragment">
+								Develop new features in React without rewriting existing code.
+							</span>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<section>
+						<h3>Components</h3>
+						<p>
+							Components let you split the UI into independent, reusable pieces,
+							and think about each piece in isolation.
+						</p>
+						<p>Let's create a Title component</p>
+					</section>
+
+					<section data-auto-animate data-auto-animate-id="title-react">
+						<pre
+							data-id="title-react"><code data-trim data-noescape data-line-numbers >
+              // Define a Title component
+              function Title() {
+                return &lt;h2&gt;Some title here&lt;/h2&gt;
+              }
+              // Use the Title component in JSX
+              function App() {
+                return (
+                  &lt;div&gt;
+                    &lt;Title /&gt;
+                  &lt;/div&gt;
+                )
+              }
+
+                </code></pre>
+					</section>
+					<section data-auto-animate data-auto-animate-id="title-react">
+						<pre
+							data-id="title-react"><code data-trim data-noescape data-line-numbers="9" >
+              // Define a Title component
+              function Title() {
+                return &lt;h2&gt;Some title here&lt;/h2&gt;
+              }
+              // Use the Title component in JSX
+              function App() {
+                return (
+                  &lt;div&gt;
+                    &lt;Title color="red" /&gt;
+                  &lt;/div&gt;
+                )
+              }
+
+                </code></pre>
+					</section>
+					<section data-auto-animate data-auto-animate-id="title-react">
+						<pre
+							data-id="title-react"><code data-trim data-noescape data-line-numbers="9,2" >
+              // Define a Title component
+              function Title(props) {
+                return &lt;h2&gt;Some title here&lt;/h2&gt;
+              }
+              // Use the Title component in JSX
+              function App() {
+                return (
+                  &lt;div&gt;
+                    &lt;Title colour="red" /&gt;
+                  &lt;/div&gt;
+                )
+              }
+
+                </code></pre>
+					</section>
+					<section data-auto-animate data-auto-animate-id="title-react">
+						<pre
+							data-id="title-react"><code data-trim data-noescape data-line-numbers="9,2,3" >
+              // Define a Title component
+              function Title(props) {
+                return &lt;h2 style={{color: props.colour}} &gt;Some title here&lt;/h2&gt;
+              }
+              // Use the Title component in JSX
+              function App() {
+                return (
+                  &lt;div&gt;
+                    &lt;Title colour="red" /&gt;
+                  &lt;/div&gt;
+                )
+              }
+                </code></pre>
+					</section>
+					<section data-auto-animate data-auto-animate-id="title-react">
+						<pre
+							data-id="title-react"><code data-trim data-noescape data-line-numbers >
+              // Define a Title component
+              function Title(props) {
+                return (
+                  &lt;&gt;
+                    &lt;h2 style={{color: props.colour}} &gt;Some title here&lt;/h2&gt;
+                    &lt;hr/&gt;
+                  &lt;/&gt;
+                )
+              }
+              // Use the Title component in JSX
+              function App() {
+                return (
+                  &lt;div&gt;
+                    &lt;Title colour="red" /&gt;
+                  &lt;/div&gt;
+                )
+              }
+                </code></pre>
+					</section>
+					<section data-auto-animate data-auto-animate-id="title-react">
+						<pre
+							data-id="title-react"><code data-trim data-noescape data-line-numbers >
+              // Define a Title component
+              function Title(props) {
+                return (
+                  &lt;&gt;
+                    &lt;h2 style={{color: props.colour}} &gt;{props.text}&lt;/h2&gt;
+                    &lt;hr/&gt;
+                  &lt;/&gt;
+                )
+              }
+              // Use the Title component in JSX
+              function App() {
+                return (
+                  &lt;div&gt;
+                    &lt;Title colour="red" text="Here is a title!" /&gt;
+
+                    &lt;Title colour="dodgerblue" text="And another one!" /&gt;
+                  &lt;/div&gt;
+                )
+              }
+                </code></pre>
+					</section>
+					<section data-auto-animate data-auto-animate-id="title-react">
+						<pre
+							data-id="title-react"><code data-trim data-noescape data-line-numbers >
+              // Define a Title component
+              function Title(props) {
+                return (
+                  &lt;&gt;
+                    &lt;h2 style={{color: props.colour}}&gt;{props.children}&lt;/h2&gt;
+                    &lt;hr/&gt;
+                  &lt;/&gt;
+                )
+              }
+              // Use the Title component in JSX
+              function App() {
+                return (
+                  &lt;div&gt;
+                    &lt;Title colour="red"&gt;Here is a title!&lt;/Title&gt;
+
+                    &lt;Title colour="dodgerblue"&gt;And another one&lt;/Title&gt;
+                  &lt;/div&gt;
+                )
+              }
+                </code></pre>
+					</section>
+				</section>
+
+				<section>
+					<h3>Creating a React Component</h3>
+					<p>
+						A React component can be defined as a JavaScript class or function.
+						Components defined as classes have some additional features.
+					</p>
+					<pre><code data-trim data-noescape>
+        // Function component
+        function Welcome(props) {
+          return &lt;h1&gt;Hello, {props.name}&lt;/h1&gt;;
+        }
+        
+        // Class component
+        class Welcome extends React.Component {
+          render() {
+            return &lt;h1&gt;Hello, {this.props.name}&lt;/h1&gt;;
+          }
+        }
+          </code></pre>
+				</section>
+				<section>
+					<h3>Installations</h3>
+					<p>Let's take a minute to install a few things:</p>
+					<ul>
+						<li>Chrome / Firefox React dev tool</li>
+						<li>VsCode: ES7+ React/Redux ...snippets by dsznajder</li>
+					</ul>
+				</section>
+			</div>
+		</div>
+
+		<script src="../../../dist/reveal.js"></script>
+		<script src="../../../plugin/highlight/highlight.js"></script>
+
+		<script>
+			Reveal.initialize({
+				// center: true,
+				hash: true,
+				plugins: [RevealHighlight],
+			})
+		</script>
+	</body>
+</html>

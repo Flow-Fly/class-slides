@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<title>Ironhack - Introduction</title>
+
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<link rel="stylesheet" href="../../../dist/reveal.css" />
+		<link rel="stylesheet" href="../../../dist/theme/moon.css" />
+		<link rel="stylesheet" href="../../../plugin/highlight/monokai.css" />
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-image="">
+					<h3>Node/npm and React:</h3>
+					<ul>
+						<li>
+							<a href="./index.html">Node / npm</a>
+						</li>
+						<li>
+							<a href="./react-intro.html">React - Intro</a>
+						</li>
+						<li>
+							<a href="#">React - Components & Props</a>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Creating React Components</h3>
+					<p>
+						React components are the core building blocks of a React
+						application. They can be defined as functions or classes.
+					</p>
+					<pre><code data-trim data-noescape>
+        // Function Component
+        function Welcome(props) {
+          return &lt;h1&gt;Hello, {props.name}&lt;/h1&gt;;
+        }
+        
+        // Class Component
+        class Welcome extends React.Component {
+          render() {
+            return &lt;h1&gt;Hello, {this.props.name}&lt;/h1&gt;;
+          }
+        }
+          </code></pre>
+					<p>
+						Both components above are equivalent from React's point of view.
+					</p>
+				</section>
+				<section>
+					<h3>Component Hierarchy and Props</h3>
+					<p>
+						Components can use props to receive data from their parent, allowing
+						for dynamic content.
+					</p>
+					<pre><code data-trim data-noescape>
+        function App() {
+          return (
+            &lt;div&gt;
+              &lt;Welcome name="Sarah" /&gt;
+              &lt;Welcome name="Cahal" /&gt;
+              &lt;Welcome name="Edite" /&gt;
+            &lt;/div&gt;
+          );
+        }
+          </code></pre>
+					<p>
+						This <code>App</code> component renders three
+						<code>Welcome</code> components, each with different props for the
+						<code>name</code>.
+					</p>
+				</section>
+				<section>
+					<h3>Reusable Components</h3>
+					<p>
+						Props make it easy to create reusable components. A single component
+						can be used to display different data.
+					</p>
+					<pre><code data-trim data-noescape>
+        // Button component
+        function Button(props) {
+          return &lt;button className={props.style}&gt;{props.label}&lt;/button&gt;;
+        }
+        
+        // Use Button component with different props
+        function App() {
+          return (
+            &lt;div&gt;
+              &lt;Button label="Click me" style="primary" /&gt;
+              &lt;Button label="Delete" style="danger" /&gt;
+            &lt;/div&gt;
+          );
+        }
+          </code></pre>
+				</section>
+				<section>
+					<h3>Using Components from npm</h3>
+					<p>
+						React's ecosystem includes many pre-made components that can be
+						installed via npm and imported into your project.
+					</p>
+					<pre><code data-trim data-noescape>
+        // Install a component library, e.g., react-player
+        // npm i react-player
+        
+        // import the ReactPlayer component
+        import ReactPlayer from 'react-player';
+        
+        function App() {
+          return &lt;ReactPlayer url="https://www.youtube.com/watch?v=dQw4w9WgXcQ"/&gt;
+        }
+          </code></pre>
+					<p>
+						By importing and using components from libraries, you can build
+						feature-rich applications faster.
+					</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="../../../dist/reveal.js"></script>
+		<script src="../../../plugin/highlight/highlight.js"></script>
+
+		<script>
+			Reveal.initialize({
+				// center: true,
+				hash: true,
+				plugins: [RevealHighlight],
+			})
+		</script>
+	</body>
+</html>
